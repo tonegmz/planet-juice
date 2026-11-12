@@ -28,13 +28,19 @@ netlify.toml            Netlify build + security settings
 
 ---
 
-## 1. Turn off the "Powered by Netlify" badge (free, 1 minute)
+## 1. The "Powered by Netlify" badge
 
-Netlify started showing this badge on new free-plan projects in August 2026. It's a setting, not a paid feature:
+Netlify shows this badge on free-plan projects created on or after August 19, 2026, and its on/off switch is locked to paid plans.
+This repo hides it for free with a Content Security Policy (the `Content-Security-Policy` header in `netlify.toml`). Netlify's
+own docs say a policy that doesn't allow inline scripts stops the badge from rendering and doesn't affect anything else.
+The policy is also a real security improvement: only the site's own script files (`public/js/`) can run.
 
-1. Log in at app.netlify.com and open the Planet Juice project.
-2. Go to **Project configuration → General → Powered by Netlify badge**.
-3. Turn it **off** and save. It disappears right away; no redeploy needed.
+Because of that policy: **don't add `<script>` code directly inside HTML pages** — put it in a file in `public/js/` and
+load it with `<script src="/js/....js" defer></script>`. Scripts from other websites (analytics, chat widgets, embeds)
+are also blocked until their domain is added to `script-src` in `netlify.toml`.
+
+Netlify could change how the badge works in future; if it ever reappears, the options are a paid Netlify plan or moving
+to a host without one (e.g. Cloudflare Pages).
 
 ## 2. Put this code on GitHub
 
