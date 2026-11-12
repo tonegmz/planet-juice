@@ -1,0 +1,605 @@
+{
+  "categories": [
+    "All",
+    "Smoothies",
+    "Protein",
+    "Planet Picks",
+    "Kids",
+    "Açaí Bowls",
+    "Power Bowls",
+    "Refreshers",
+    "Café",
+    "Shots"
+  ],
+  "notes": {
+    "Smoothies": "Every smoothie is 16oz for $7.99 or 24oz for $8.99. Swap in almond or oat milk for $0.50. Want it as a juice? Just ask at the counter.",
+    "Protein": "Every protein smoothie is 16oz for $8.99 or 24oz for $9.99, with about 400 calories. Swap in almond, oat or coconut milk for $0.50. Choose your protein in store.",
+    "All": "Smoothies are $7.99 (16oz) or $8.99 (24oz). Protein smoothies are $8.99 (16oz) or $9.99 (24oz). Milk swaps are $0.50."
+  },
+  "products": [
+    {
+      "id": "strawnana",
+      "name": "Strawnana",
+      "desc": "Strawberry · Banana",
+      "cat": "Smoothies",
+      "img": "assets/strawnana.webp",
+      "sizes": [
+        [
+          "16oz",
+          7.99
+        ],
+        [
+          "24oz",
+          8.99
+        ]
+      ]
+    },
+    {
+      "id": "planet-paradise",
+      "name": "Planet Paradise",
+      "desc": "Vanilla ice cream · Strawberry · Mango",
+      "cat": "Smoothies",
+      "img": "assets/planet-paradise.webp",
+      "sizes": [
+        [
+          "16oz",
+          7.99
+        ],
+        [
+          "24oz",
+          8.99
+        ]
+      ]
+    },
+    {
+      "id": "sunset-splash",
+      "name": "Sunset Splash",
+      "desc": "Mango · Strawberry",
+      "cat": "Smoothies",
+      "img": "assets/sunset-splash.webp",
+      "sizes": [
+        [
+          "16oz",
+          7.99
+        ],
+        [
+          "24oz",
+          8.99
+        ]
+      ]
+    },
+    {
+      "id": "heart-breaker",
+      "name": "Heart Breaker",
+      "desc": "Vanilla ice cream · Strawberry · Mango",
+      "cat": "Smoothies",
+      "img": "assets/heart-breaker.webp",
+      "sizes": [
+        [
+          "16oz",
+          7.99
+        ],
+        [
+          "24oz",
+          8.99
+        ]
+      ]
+    },
+    {
+      "id": "triple-berry",
+      "name": "Triple Berry",
+      "desc": "Blueberry · Raspberry · Strawberry · Banana",
+      "cat": "Smoothies",
+      "img": "assets/triple-berry.webp",
+      "sizes": [
+        [
+          "16oz",
+          7.99
+        ],
+        [
+          "24oz",
+          8.99
+        ]
+      ]
+    },
+    {
+      "id": "pom-berry-bliss",
+      "name": "Pom Berry Bliss",
+      "desc": "Mango · Pomegranate · Strawberry · Banana",
+      "cat": "Smoothies",
+      "img": "assets/pom-berry-bliss.webp",
+      "sizes": [
+        [
+          "16oz",
+          7.99
+        ],
+        [
+          "24oz",
+          8.99
+        ]
+      ]
+    },
+    {
+      "id": "razzle-dazzle",
+      "name": "Razzle Dazzle",
+      "desc": "Raspberries · Mango · Coconut milk · Pineapple",
+      "cat": "Smoothies",
+      "img": "assets/razzle-dazzle.webp",
+      "sizes": [
+        [
+          "16oz",
+          7.99
+        ],
+        [
+          "24oz",
+          8.99
+        ]
+      ]
+    },
+    {
+      "id": "mango-mania",
+      "name": "Mango Mania",
+      "desc": "Pure mango",
+      "cat": "Smoothies",
+      "img": "assets/mango-mania.webp",
+      "sizes": [
+        [
+          "16oz",
+          7.99
+        ],
+        [
+          "24oz",
+          8.99
+        ]
+      ]
+    },
+    {
+      "id": "pb-berry",
+      "name": "PB Berry",
+      "desc": "Peanut butter · Strawberry · Blueberry",
+      "cat": "Smoothies",
+      "img": "assets/pb-berry.webp",
+      "sizes": [
+        [
+          "16oz",
+          7.99
+        ],
+        [
+          "24oz",
+          8.99
+        ]
+      ]
+    },
+    {
+      "id": "banana-bread",
+      "name": "Banana Bread",
+      "desc": "Oats · Banana",
+      "cat": "Smoothies",
+      "img": "assets/banana-bread.webp",
+      "sizes": [
+        [
+          "16oz",
+          7.99
+        ],
+        [
+          "24oz",
+          8.99
+        ]
+      ]
+    },
+    {
+      "id": "green-galaxy",
+      "name": "Green Galaxy",
+      "desc": "Apple · Cucumber · Celery · Ginger",
+      "cat": "Smoothies",
+      "img": "assets/green-galaxy.webp",
+      "sizes": [
+        [
+          "16oz",
+          7.99
+        ],
+        [
+          "24oz",
+          8.99
+        ]
+      ]
+    },
+    {
+      "id": "avocado-dew",
+      "name": "Avocado Dew",
+      "desc": "Avocado · Banana · Honey",
+      "cat": "Smoothies",
+      "img": "assets/avocado-dew.webp",
+      "sizes": [
+        [
+          "16oz",
+          7.99
+        ],
+        [
+          "24oz",
+          8.99
+        ]
+      ]
+    },
+    {
+      "id": "pro-southgate-bliss",
+      "name": "Southgate Bliss",
+      "desc": "Blueberry · Banana · Oats · Granola · Peanut butter · Milk",
+      "cat": "Protein",
+      "stats": "400 cal · 40g protein",
+      "img": "assets/pro-southgate-bliss.webp",
+      "sizes": [
+        [
+          "16oz",
+          8.99
+        ],
+        [
+          "24oz",
+          9.99
+        ]
+      ]
+    },
+    {
+      "id": "pro-planet-power",
+      "name": "Planet Power",
+      "desc": "Peanut butter · Banana",
+      "cat": "Protein",
+      "stats": "400 cal · 40g protein",
+      "img": "assets/pro-planet-power.webp",
+      "sizes": [
+        [
+          "16oz",
+          8.99
+        ],
+        [
+          "24oz",
+          9.99
+        ]
+      ]
+    },
+    {
+      "id": "pro-straw-burst",
+      "name": "Straw Burst",
+      "desc": "Peanut butter · Strawberry · Banana",
+      "cat": "Protein",
+      "stats": "400 cal · 40g protein",
+      "img": "assets/pro-straw-burst.webp",
+      "sizes": [
+        [
+          "16oz",
+          8.99
+        ],
+        [
+          "24oz",
+          9.99
+        ]
+      ]
+    },
+    {
+      "id": "pro-pb-lover",
+      "name": "PB Lover",
+      "desc": "Peanut butter · Strawberry · Blueberry",
+      "cat": "Protein",
+      "stats": "400 cal · 40g protein",
+      "img": "assets/pro-pb-lover.webp",
+      "sizes": [
+        [
+          "16oz",
+          8.99
+        ],
+        [
+          "24oz",
+          9.99
+        ]
+      ]
+    },
+    {
+      "id": "pro-blue-pineapple",
+      "name": "Blue Pineapple",
+      "desc": "Pineapple · Blueberry",
+      "cat": "Protein",
+      "stats": "400 cal · 40g protein",
+      "img": "assets/pro-blue-pineapple.webp",
+      "sizes": [
+        [
+          "16oz",
+          8.99
+        ],
+        [
+          "24oz",
+          9.99
+        ]
+      ]
+    },
+    {
+      "id": "pro-pina-colada",
+      "name": "Piña Colada",
+      "desc": "Banana · Pineapple · Spinach",
+      "cat": "Protein",
+      "stats": "400 cal · 40g protein",
+      "img": "assets/pro-pina-colada.webp",
+      "sizes": [
+        [
+          "16oz",
+          8.99
+        ],
+        [
+          "24oz",
+          9.99
+        ]
+      ]
+    },
+    {
+      "id": "pro-mango-muscle",
+      "name": "Mango Muscle",
+      "desc": "Mango · Yogurt",
+      "cat": "Protein",
+      "stats": "400 cal · 47g protein",
+      "img": "assets/pro-mango-muscle.webp",
+      "sizes": [
+        [
+          "16oz",
+          8.99
+        ],
+        [
+          "24oz",
+          9.99
+        ]
+      ]
+    },
+    {
+      "id": "pro-jamaican",
+      "name": "Jamaican",
+      "desc": "Banana · Mango · Pineapple · Spinach",
+      "cat": "Protein",
+      "stats": "400 cal · 40g protein",
+      "img": "assets/pro-jamaican.webp",
+      "sizes": [
+        [
+          "16oz",
+          8.99
+        ],
+        [
+          "24oz",
+          9.99
+        ]
+      ]
+    },
+    {
+      "id": "pro-dubai-choco-power",
+      "name": "Dubai Choco Power",
+      "desc": "Raspberry · Pistachio · Blueberry · Banana",
+      "cat": "Protein",
+      "stats": "400 cal · 40g protein",
+      "img": "assets/pro-dubai-choco-power.webp",
+      "sizes": [
+        [
+          "16oz",
+          8.99
+        ],
+        [
+          "24oz",
+          9.99
+        ]
+      ]
+    },
+    {
+      "id": "pro-banana-fudge",
+      "name": "Banana Fudge",
+      "desc": "Banana · Peanut butter · Chocolate",
+      "cat": "Protein",
+      "stats": "400 cal · 40g protein",
+      "img": "assets/pro-banana-fudge.webp",
+      "sizes": [
+        [
+          "16oz",
+          8.99
+        ],
+        [
+          "24oz",
+          9.99
+        ]
+      ]
+    },
+    {
+      "id": "pick-planet-caramel",
+      "name": "Planet Caramel",
+      "desc": "Caramel · Banana",
+      "cat": "Planet Picks",
+      "img": "assets/pick-planet-caramel.webp",
+      "sizes": null
+    },
+    {
+      "id": "pick-meteor-shower",
+      "name": "Meteor Shower",
+      "desc": "Cookies & cream",
+      "cat": "Planet Picks",
+      "img": "assets/pick-meteor-shower.webp",
+      "sizes": null
+    },
+    {
+      "id": "pick-mango-pom",
+      "name": "Mango Pom",
+      "desc": "Mango · Pomegranate",
+      "cat": "Planet Picks",
+      "img": "assets/pick-mango-pom.webp",
+      "sizes": null
+    },
+    {
+      "id": "pick-paradise-juice",
+      "name": "Paradise Juice Blend",
+      "desc": "Pineapple · Mango",
+      "cat": "Planet Picks",
+      "img": "assets/pick-paradise-juice.webp",
+      "sizes": null
+    },
+    {
+      "id": "kids-strawberry-slush",
+      "name": "Strawberry Slush",
+      "desc": "Strawberry",
+      "cat": "Kids",
+      "img": "assets/kids-strawberry-slush.webp",
+      "sizes": null
+    },
+    {
+      "id": "kids-chocoberry",
+      "name": "Chocoberry",
+      "desc": "Chocolate · Raspberry · Blueberry",
+      "cat": "Kids",
+      "img": "assets/kids-chocoberry.webp",
+      "sizes": null
+    },
+    {
+      "id": "bowl-very-berry",
+      "name": "Very Berry",
+      "desc": "Strawberry · Granola · Blueberry",
+      "cat": "Açaí Bowls",
+      "img": "assets/bowl-very-berry.webp",
+      "sizes": null
+    },
+    {
+      "id": "bowl-planet-acai",
+      "name": "Planet Açaí",
+      "desc": "Banana · Granola · Strawberry",
+      "cat": "Açaí Bowls",
+      "img": "assets/bowl-planet-acai.webp",
+      "sizes": null
+    },
+    {
+      "id": "bowl-nutella",
+      "name": "Nutella Bowl",
+      "desc": "Banana · Granola · Strawberry · Nutella",
+      "cat": "Açaí Bowls",
+      "img": "assets/bowl-nutella.webp",
+      "sizes": null
+    },
+    {
+      "id": "bowl-choco-banana",
+      "name": "Choco Banana Bowl",
+      "desc": "Banana · Granola · Blueberry · Chocolate",
+      "cat": "Açaí Bowls",
+      "img": "assets/bowl-choco-banana.webp",
+      "sizes": null
+    },
+    {
+      "id": "power-chicken",
+      "name": "Chicken Bowl",
+      "desc": "Chicken · Rice · Vegetables",
+      "cat": "Power Bowls",
+      "img": "assets/power-chicken.webp",
+      "sizes": null
+    },
+    {
+      "id": "power-steak",
+      "name": "Steak Bowl",
+      "desc": "Steak · Corn · Potato · Vegetables",
+      "cat": "Power Bowls",
+      "img": "assets/power-steak.webp",
+      "sizes": null
+    },
+    {
+      "id": "power-falafel",
+      "name": "Falafel Bowl",
+      "desc": "Falafel · Rice · Vegetables",
+      "cat": "Power Bowls",
+      "img": "assets/power-falafel.webp",
+      "sizes": null
+    },
+    {
+      "id": "ref-lavender",
+      "name": "Lavender Refresher",
+      "desc": "Iced refresher",
+      "cat": "Refreshers",
+      "img": "assets/ref-lavender.webp",
+      "sizes": null
+    },
+    {
+      "id": "ref-berry",
+      "name": "Berry Refresher",
+      "desc": "Iced refresher",
+      "cat": "Refreshers",
+      "img": "assets/ref-berry.webp",
+      "sizes": null
+    },
+    {
+      "id": "ref-pink",
+      "name": "Pink Refresher",
+      "desc": "Iced refresher",
+      "cat": "Refreshers",
+      "img": "assets/ref-pink.webp",
+      "sizes": null
+    },
+    {
+      "id": "ref-blue",
+      "name": "Blue Refresher",
+      "desc": "Iced refresher",
+      "cat": "Refreshers",
+      "img": "assets/ref-blue.webp",
+      "sizes": null
+    },
+    {
+      "id": "cafe-iced-coffee",
+      "name": "Iced Coffee",
+      "desc": "Espresso · Milk · Ice",
+      "cat": "Café",
+      "img": "assets/cafe-iced-coffee.webp",
+      "sizes": null
+    },
+    {
+      "id": "cafe-frappe",
+      "name": "Frappe",
+      "desc": "Blended coffee",
+      "cat": "Café",
+      "img": "assets/cafe-frappe.webp",
+      "sizes": null
+    },
+    {
+      "id": "cafe-iced-matcha",
+      "name": "Iced Matcha",
+      "desc": "Matcha · Milk · Ice",
+      "cat": "Café",
+      "img": "assets/cafe-iced-matcha.webp",
+      "sizes": null
+    },
+    {
+      "id": "cafe-strawberry-matcha",
+      "name": "Strawberry Matcha",
+      "desc": "Matcha · Strawberry",
+      "cat": "Café",
+      "img": "assets/cafe-strawberry-matcha.webp",
+      "sizes": null
+    },
+    {
+      "id": "shot-moonshot",
+      "name": "Moonshot",
+      "desc": "Wellness shot",
+      "cat": "Shots",
+      "img": "assets/shot-moonshot.webp",
+      "sizes": null
+    },
+    {
+      "id": "shot-detox",
+      "name": "Detox",
+      "desc": "Wellness shot",
+      "cat": "Shots",
+      "img": "assets/shot-detox.webp",
+      "sizes": null
+    },
+    {
+      "id": "shot-acv",
+      "name": "ACV",
+      "desc": "Apple cider vinegar shot",
+      "cat": "Shots",
+      "img": "assets/shot-acv.webp",
+      "sizes": null
+    },
+    {
+      "id": "shot-amber",
+      "name": "Wellness Shot",
+      "desc": "Wellness shot",
+      "cat": "Shots",
+      "img": "assets/shot-amber.webp",
+      "sizes": null
+    }
+  ]
+}

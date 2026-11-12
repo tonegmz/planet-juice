@@ -1,0 +1,994 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Planet Juice | Smoothies, Personal Training &amp; Meal Plans in Southgate, MI</title>
+<meta name="description" content="Planet Juice on Eureka Rd in Southgate, Michigan: real-fruit smoothies, açaí bowls, personal training with certified trainer Ewah, custom meal plans and online coaching.">
+<meta name="theme-color" content="#0B0B0E">
+<link rel="canonical" href="https://www.planetjuice.shop/">
+<link rel="icon" type="image/png" href="/assets/logo.png">
+<link rel="apple-touch-icon" href="/assets/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Planet Juice | Southgate, MI">
+<meta property="og:description" content="Real fruit. Real nutrition. Real coaching. Smoothies, training and meal plans on Eureka Road.">
+<meta property="og:url" content="https://www.planetjuice.shop/">
+<meta property="og:image" content="https://www.planetjuice.shop/assets/mural.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Planet Juice","url":"https://www.planetjuice.shop/","telephone":"+1-734-444-2819","address":{"@type":"PostalAddress","streetAddress":"13615 Eureka Rd","addressLocality":"Southgate","addressRegion":"MI","postalCode":"48195","addressCountry":"US"},"openingHours":["Mo-Fr 09:00-22:00","Sa 09:00-21:00","Su 10:00-19:00"],"sameAs":["https://www.instagram.com/planetjuiceee/"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: the client's design, single look by choice. Dark hero and packages, light content bands, purple brand strips. */
+:root{
+  --purple:#7B5EA7; --purple-d:#684C93; --lav:#B7A0DD; --lav-soft:#EFE9F8;
+  --ink:#0B0B0E; --ink-2:#18161D; --ink-line:#2A2731;
+  --mist:#F3F1F6; --line:#E6E2EC; --muted:#5D5968; --white:#FFFFFF;
+  --on-dark:#F4F2F8; --hero-bg:#100137; --on-dark-muted:#B9B4C4;
+  --display:"Archivo","Arial Black","Helvetica Neue",Arial,sans-serif;
+  --body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --wrap:1200px; --r:16px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--white);color:var(--ink);font:400 16px/1.55 var(--body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--ink)}
+img{max-width:100%;display:block}
+a{color:inherit}
+button,input{font:inherit}
+:focus-visible{outline:2px solid var(--lav);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.section{padding-block:clamp(64px,9vw,112px)}
+.eyebrow{font:700 11px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--purple);margin:0 0 14px}
+.dark .eyebrow{color:var(--lav)}
+.h-display{font-family:var(--display);font-stretch:112%;font-weight:900;letter-spacing:-.04em;line-height:.98;margin:0;text-wrap:balance}
+h2.h-display{font-size:clamp(34px,5.2vw,58px)}
+h3{font:800 18px/1.25 var(--display);font-stretch:105%;letter-spacing:-.01em;margin:0}
+.lead{color:var(--muted);max-width:52ch;margin:16px 0 0}
+.dark{background:var(--ink);color:var(--on-dark)}
+.dark .lead{color:var(--on-dark-muted)}
+.mist{background:var(--mist)}
+
+/* buttons */
+.btn{max-width:100%;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:44px;padding:0 20px;border-radius:10px;border:1.5px solid transparent;font:600 15px/1 var(--body);text-decoration:none;cursor:pointer;transition:background .15s,color .15s,border-color .15s,transform .15s;white-space:nowrap}
+.btn:active{transform:translateY(1px)}
+.btn-purple{background:var(--purple);color:var(--white)}
+.btn-purple:hover{background:var(--purple-d)}
+.btn-ink{background:var(--ink);color:var(--white)}
+.btn-ink:hover{background:#26232c}
+.btn-white{background:var(--white);color:var(--ink)}
+.btn-white:hover{background:var(--lav-soft)}
+.btn-line{background:transparent;border-color:var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--white)}
+.dark .btn-line{border-color:#4a4653;color:var(--white)}
+.dark .btn-line:hover{background:var(--white);color:var(--ink);border-color:var(--white)}
+.btn-lg{min-height:52px;padding:0 24px;font-size:16px}
+.btn-block{width:100%}
+.txt-link{font-weight:600;color:var(--lav);text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1.5px}
+.ico{width:18px;height:18px;flex:none;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* top bar + header */
+.topbar{background:var(--purple);color:var(--white);font:600 12.5px/1.3 var(--body);text-align:center;padding-block:9px}
+.topbar .dot{opacity:.6;margin:0 6px}
+.header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(11,11,14,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--ink-line);color:var(--white)}
+.header .wrap{display:flex;align-items:center;gap:20px;min-height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:900 17px/1 var(--display);font-stretch:118%;letter-spacing:.02em;white-space:nowrap}
+.brand .logo-img{width:auto;height:30px}
+.nav{display:flex;gap:26px;margin:0 auto}
+.nav a{text-decoration:none;font-size:14.5px;font-weight:500;color:#E3E0EA}
+.nav a:hover{color:var(--lav)}
+.hdr-actions{display:flex;gap:8px;align-items:center}
+.icon-btn{position:relative;display:inline-grid;place-items:center;width:44px;height:44px;border-radius:10px;border:1.5px solid var(--ink-line);background:transparent;color:var(--white);cursor:pointer}
+.icon-btn:hover{border-color:#4a4653}
+.cart-count{position:absolute;top:-6px;right:-6px;min-width:20px;height:20px;padding:0 5px;border-radius:10px;background:var(--purple);color:var(--white);font:700 11px/20px var(--body);text-align:center}
+.cart-count[data-n="0"]{display:none}
+.header .btn{min-height:42px;font-size:14px;padding:0 16px}
+.header .btn-line{border-color:#3a3641;color:var(--white)}
+.header .btn-line:hover{background:var(--white);color:var(--ink)}
+.menu-toggle{display:none}
+.mobile-nav{display:none}
+@media (max-width:1020px){
+  .nav,.hdr-actions .btn-line{display:none}
+  .menu-toggle{display:inline-grid}
+  .hdr-actions{margin-left:auto}
+  .mobile-nav{display:block;border-top:1px solid var(--ink-line)}
+  .mobile-nav nav{display:grid;padding-block:8px 18px}
+  .mobile-nav a{padding:13px 0;text-decoration:none;font-weight:600;border-bottom:1px solid var(--ink-line)}
+  .mobile-nav .btn{margin-top:14px}
+}
+@media (max-width:420px){.hdr-actions .btn-purple{display:none}}
+
+/* hero */
+.hero{position:relative;isolation:isolate;overflow:hidden;background:var(--hero-bg);padding-block:clamp(56px,8vw,96px) 0}
+.hero-media{position:absolute;inset:0;z-index:-2}
+.hero-media img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:72% center;transform:scale(1.03)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(16,1,55,.55) 0%,rgba(16,1,55,0) 45%),linear-gradient(0deg,rgba(11,4,30,.9) 0%,rgba(11,4,30,0) 20%)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,560px);min-height:clamp(460px,40vw,640px);align-content:center}
+@media (max-width:1100px){
+  .hero{padding-top:0}
+  .hero-grid{grid-template-columns:minmax(0,640px);min-height:0;padding-top:28px}
+  .hero-media{position:relative;inset:auto;display:block}
+  .hero-media img{position:static;inset:auto;transform:none;width:100%;height:auto;max-width:100%;aspect-ratio:16/9;object-fit:cover;object-position:80% 50%}
+  .hero::before{display:none}
+  .hero-media::after{content:"";position:absolute;inset:auto 0 0;height:40%;background:linear-gradient(0deg,var(--hero-bg),rgba(16,1,55,0))}
+}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid #3a3641;border-radius:999px;padding:7px 14px;font:700 10.5px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:#D9D4E3}
+.pill::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--lav)}
+.hero h1{font-size:clamp(46px,7.6vw,84px);margin-top:22px;line-height:.95}
+.hero h1 span{display:block;color:var(--lav)}
+.hero .lead{font-size:17px;max-width:44ch}
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px;margin-top:30px}
+.cta-row .txt-link{margin-left:8px}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:clamp(40px,6vw,64px);padding-block:24px 30px;border-top:1px solid rgba(255,255,255,.14)}
+.stat{display:flex;align-items:center;gap:10px;font-weight:600;font-size:14px;color:#E6E3EC}
+.stat .ico{color:var(--lav)}
+@media (max-width:860px){
+  .hero-media img{aspect-ratio:1/1;object-position:60% 50%}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* strip */
+.strip{background:var(--purple);color:var(--white);overflow:hidden}
+.strip .wrap{display:flex;justify-content:space-between;gap:24px;padding-block:16px;font:800 clamp(15px,1.6vw,17px)/1.2 var(--display);font-stretch:108%;letter-spacing:-.01em;flex-wrap:wrap}
+
+/* problem */
+.prob-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:40px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:22px}
+.ico-box{display:grid;place-items:center;width:34px;height:34px;border-radius:9px;background:var(--lav-soft);color:var(--purple);margin-bottom:18px}
+.ico-box .ico{width:16px;height:16px}
+.card p{margin:8px 0 0;color:var(--muted);font-size:14px;line-height:1.5}
+.mission{display:flex;align-items:center;justify-content:space-between;gap:32px;margin-top:20px;background:var(--purple);color:var(--white);border-radius:var(--r);padding:clamp(28px,4vw,40px) clamp(24px,4vw,36px)}
+.mission .eyebrow{color:#E4DAF4}
+.mission h2{font-size:clamp(28px,3.8vw,40px)}
+.mission p{margin:14px 0 0;max-width:48ch;color:#F1ECF8;font-size:15px}
+.mission .logo-img{width:auto;height:96px;flex:none}
+@media (max-width:760px){.prob-grid{grid-template-columns:1fr}.mission .logo-img{display:none}}
+
+/* services */
+.group-label{display:flex;align-items:center;gap:14px;font:700 11px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;margin:44px 0 18px}
+.group-label::after{content:"";height:1px;flex:1;background:var(--line)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.svc{display:flex;flex-direction:column;background:var(--white);border-radius:var(--r);overflow:hidden}
+.svc-top{position:relative;isolation:isolate;overflow:hidden;height:200px;display:flex;align-items:flex-end;padding:0 20px 14px;background:var(--ink);color:var(--lav);font:900 clamp(40px,4.6vw,52px)/.9 var(--display);font-stretch:118%;letter-spacing:-.03em}
+.svc-top img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.svc-top::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(11,11,14,.88) 0%,rgba(11,11,14,.35) 55%,rgba(11,11,14,.05) 100%)}
+.svc-img{height:150px;background:var(--lav-soft);overflow:hidden}
+.svc-img img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.svc-body{display:flex;flex-direction:column;flex:1;padding:20px 18px 18px}
+.svc-body p{margin:8px 0 0;color:var(--muted);font-size:13.5px;line-height:1.5;flex:1}
+.price-tag{margin:16px 0 14px;font:700 11.5px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--purple)}
+.svc .btn{min-height:40px;font-size:14px}
+@media (max-width:860px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.svc-grid{grid-template-columns:1fr}}
+
+/* packages */
+.center{text-align:center}
+.center .lead{margin-inline:auto}
+.pkg-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:48px;align-items:stretch}
+.pkg{position:relative;display:flex;flex-direction:column;background:var(--ink-2);border:1px solid var(--ink-line);border-radius:var(--r);padding:28px 22px 22px}
+.pkg.featured{background:var(--purple);border-color:var(--purple)}
+.pkg .badge{position:absolute;top:-12px;left:22px;background:var(--white);color:var(--purple);border-radius:999px;padding:6px 10px;font:800 10px/1 var(--body);letter-spacing:.12em;text-transform:uppercase}
+.pkg h3{font-size:18px;color:var(--white)}
+.pkg .amt{display:flex;align-items:baseline;gap:6px;margin:8px 0 18px}
+.pkg .amt b{font:900 44px/1 var(--display);font-stretch:112%;letter-spacing:-.03em;color:var(--white)}
+.pkg .amt span{color:var(--on-dark-muted);font-size:14px}
+.pkg.featured .amt span{color:#E4DAF4}
+.pkg ul{list-style:none;margin:0 0 28px;padding:0;display:grid;gap:10px;flex:1;font-size:14px;color:#ECE9F2}
+.pkg li{display:flex;gap:10px;align-items:flex-start}
+.pkg li .ico{width:15px;height:15px;margin-top:3px;color:var(--on-dark-muted)}
+.pkg.featured li .ico{color:var(--white)}
+@media (max-width:860px){.pkg-grid{grid-template-columns:1fr;max-width:460px;margin-inline:auto}}
+
+/* results */
+.rev-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:36px}
+.rev{display:flex;flex-direction:column}
+.stars{display:flex;gap:4px;color:var(--purple);margin-bottom:14px}
+.stars svg{width:12px;height:12px;fill:currentColor}
+.rev blockquote{margin:0 0 22px;font-size:15px;line-height:1.6;flex:1}
+.who{display:flex;align-items:center;gap:12px}
+.avatar{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font:700 11.5px/1 var(--body);flex:none}
+.av-p{background:var(--purple);color:var(--white)}.av-i{background:var(--ink);color:var(--white)}.av-l{background:var(--lav-soft);color:var(--purple-d)}
+.who b{display:block;font-size:13.5px}
+.who small{display:block;font-size:11.5px;color:var(--muted)}
+@media (max-width:900px){.rev-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.rev-grid{grid-template-columns:1fr}}
+
+/* menu */
+.menu-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.menu-head h2{font-size:clamp(32px,4.6vw,50px)}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 8px;margin:28px -2px 0;scrollbar-width:thin}
+.chip{flex:none;min-height:40px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:var(--white);font:600 13px/1 var(--body);color:var(--ink);cursor:pointer}
+.chip:hover{border-color:var(--lav)}
+.chip[aria-pressed="true"]{background:var(--purple);border-color:var(--purple);color:var(--white)}
+.menu-note{margin:10px 0 22px;color:var(--muted);font-size:13.5px}
+.prod-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.prod{display:flex;flex-direction:column;background:var(--white);border-radius:14px;overflow:hidden}
+.prod-img{position:relative;height:176px;border-bottom:1px solid #F0EDF3;display:grid;place-items:end center;overflow:hidden;background:var(--white)}
+.prod-img img{position:absolute;inset:0;height:100%;width:100%;object-fit:contain;object-position:center;padding:8px 10px 14px}
+.prod-info .prod-img img{padding:28px 14px 14px}
+.nutri{display:inline-block;align-self:flex-start;margin:-6px 0 14px;padding:4px 8px;border-radius:6px;background:var(--lav-soft);color:var(--purple-d);font:700 11px/1.2 var(--body);font-variant-numeric:tabular-nums}
+.instore{font-size:12.5px;font-weight:600;color:var(--muted)}
+.prod-info .add{border-color:var(--line)}
+.cat-badge{position:absolute;z-index:1;top:10px;left:10px;background:var(--lav-soft);color:var(--purple-d);border-radius:6px;padding:4px 7px;font:800 9.5px/1 var(--body);letter-spacing:.1em;text-transform:uppercase}
+.prod-body{display:flex;flex-direction:column;flex:1;padding:16px 14px 14px}
+.prod-body h3{font-size:16px}
+.prod-body p{margin:4px 0 14px;color:var(--muted);font-size:12.5px;line-height:1.45;flex:1}
+.sizes{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.size{min-height:36px;border-radius:8px;border:1.5px solid var(--line);background:var(--white);font:700 11.5px/1 var(--body);cursor:pointer;color:var(--ink);padding:0 4px}
+.size[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--white)}
+.prod-foot{display:flex;justify-content:space-between;align-items:center;margin-top:14px}
+.prod-foot b{font:900 18px/1 var(--display);font-stretch:108%;font-variant-numeric:tabular-nums}
+.add{min-height:36px;padding:0 14px;font-size:13px;border-radius:8px}
+.add .ico{width:14px;height:14px}
+.add.added{background:var(--ink)}
+.empty-cat{grid-column:1/-1;background:var(--white);border-radius:14px;padding:36px 24px;text-align:center}
+.empty-cat h3{font-size:20px}
+.empty-cat p{color:var(--muted);margin:8px auto 18px;max-width:46ch;font-size:14.5px}
+.extras{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:14px}
+.extra{background:var(--white);border-radius:14px;padding:18px}
+.extra-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.extra-top h3{font-size:15.5px}
+.extra-top b{font:800 14px/1 var(--display);color:var(--purple);white-space:nowrap}
+.extra p{margin:8px 0 0;color:var(--muted);font-size:12.5px;line-height:1.5}
+.extra-pics{display:flex;gap:6px;margin-top:14px}
+.extra-pics figure{margin:0;flex:1;min-width:0;text-align:center}
+.extra-pics img{width:100%;height:60px;object-fit:contain}
+.extra-pics figcaption{font-size:10.5px;font-weight:600;color:var(--muted);margin-top:4px}
+
+@media (max-width:1000px){.prod-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:760px){.prod-grid{grid-template-columns:1fr 1fr}.extras{grid-template-columns:1fr}}
+@media (max-width:440px){.prod-grid{gap:10px}.prod-body{padding:14px 10px 12px}.size{font-size:12px}.size-p{display:none}.prod-img{height:156px}.prod-img img{padding:6px 8px 12px}}
+
+/* lead magnet */
+.magnet{background:var(--purple);color:var(--white)}
+.magnet .eyebrow{color:#E4DAF4}
+.magnet h2{font-size:clamp(32px,4.6vw,46px);max-width:15ch;margin-inline:auto}
+.magnet .lead{color:#F1ECF8}
+.magnet form{display:grid;grid-template-columns:1fr 1.15fr auto;gap:10px;align-items:end;max-width:560px;margin:30px auto 0;text-align:left}
+.field label{display:block;font:600 12px/1 var(--body);margin-bottom:7px}
+.field input{width:100%;height:46px;border-radius:9px;border:1.5px solid #CDBDE6;background:var(--white);color:var(--ink);padding:0 13px;font-size:15px}
+.field input:focus{outline:none;border-color:var(--ink)}
+.fineprint{font-size:11.5px;margin:10px 0 0;opacity:.85}
+.form-msg{font-weight:600;font-size:14px;margin:14px 0 0}
+@media (max-width:640px){.magnet form{grid-template-columns:1fr}}
+
+/* shop */
+.shop-head{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:32px;align-items:start}
+.shop-head h2{font-size:clamp(32px,4.4vw,46px)}
+.shop-head p{color:var(--muted);margin:10px 0 0;max-width:34ch;justify-self:end}
+.mural{margin:32px 0 0}
+.mural img{width:100%;height:auto;border-radius:var(--r);aspect-ratio:814/271;object-fit:cover}
+.mural figcaption{font-size:11.5px;color:var(--muted);margin-top:8px}
+.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:48px}
+.pillar{border-top:1.5px solid var(--ink);padding-top:16px}
+.pillar span{font:700 11px/1 var(--body);color:var(--purple)}
+.pillar h3{margin-top:8px}
+.pillar p{margin:6px 0 0;color:var(--muted);font-size:14px}
+@media (max-width:760px){.shop-head,.pillars{grid-template-columns:1fr}.shop-head p{justify-self:start}}
+
+/* book */
+.book-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start}
+.book-grid h2{font-size:clamp(34px,4.6vw,48px)}
+.book-form{background:var(--ink-2);border:1px solid var(--ink-line);border-radius:var(--r);padding:22px}
+.book-form .field{margin-bottom:16px}
+.book-form .field input{background:var(--ink);border-color:var(--ink-line);color:var(--white)}
+.book-form .field input::placeholder{color:#8B8696}
+.book-form .field input:focus{border-color:var(--lav)}
+.goal-set{border:0;padding:0;margin:0 0 20px}
+.goal-set legend{font:600 12px/1 var(--body);margin-bottom:9px;padding:0}
+.goals{display:flex;flex-wrap:wrap;gap:8px}
+.goals label{cursor:pointer}
+.goals input{position:absolute;opacity:0;pointer-events:none}
+.goals span{display:inline-flex;align-items:center;min-height:36px;padding:0 14px;border-radius:999px;border:1px solid #3a3641;font:600 13px/1 var(--body);color:#E3E0EA}
+.goals input:checked+span{background:var(--purple);border-color:var(--purple);color:var(--white)}
+.goals input:focus-visible+span{outline:2px solid var(--lav);outline-offset:2px}
+.book-form .fineprint{color:var(--on-dark-muted)}
+@media (max-width:860px){.book-grid{grid-template-columns:1fr;gap:32px}}
+
+/* faq */
+.faq{max-width:740px;margin:36px auto 0;text-align:left;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 2px;cursor:pointer;font-weight:600;font-size:16px;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .ico{width:16px;height:16px;color:var(--muted);transition:transform .2s}
+.faq details[open] summary .ico{transform:rotate(180deg)}
+.faq details p{margin:0 2px 20px;color:var(--muted);font-size:14.5px;max-width:62ch}
+
+/* visit */
+.visit-grid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:48px;align-items:center}
+.visit-grid h2{font-size:clamp(38px,5.4vw,56px)}
+.visit .lead{font-size:16px;max-width:42ch}
+.visit .cta-row{margin-top:24px}
+.small-note{font-size:11.5px;color:var(--muted);margin:10px 0 0}
+.hours-card{background:var(--white);border-radius:var(--r);padding:24px}
+.hours-card .eyebrow{color:var(--muted);font-size:10px}
+.hours-card address{font:800 21px/1.2 var(--display);font-stretch:105%;font-style:normal;letter-spacing:-.01em}
+.phone{display:inline-block;margin-top:10px;color:var(--purple);font-weight:600;text-underline-offset:3px}
+.hours-card h3{font-size:14.5px;margin:22px 0 6px}
+.hours{width:100%;border-collapse:collapse;font-size:13.5px;font-variant-numeric:tabular-nums}
+.hours td{padding:9px 0;border-bottom:1px solid var(--line)}
+.hours tr:last-child td{border-bottom:0}
+.hours td:last-child{text-align:right;font-weight:700}
+.hours tr.today td{color:var(--purple)}
+@media (max-width:860px){.visit-grid{grid-template-columns:1fr}}
+
+/* footer */
+.footer{position:relative;overflow:hidden;isolation:isolate;background:var(--purple);color:var(--white)}
+.footer>.wrap{position:relative;z-index:1}
+.foot-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;padding-block:48px 36px}
+.foot-grid .logo-img{width:auto;height:42px}
+.foot-tag{font:900 19px/1.1 var(--display);font-stretch:108%;letter-spacing:-.02em;margin:14px 0 10px}
+.footer p{font-size:12.5px;line-height:1.55;margin:0;color:#F1ECF8}
+.footer h4{font:700 13px/1 var(--body);margin:0 0 12px}
+.foot-links{list-style:none;margin:0;padding:0;display:grid;gap:9px;font-size:13px}
+.foot-links a{text-decoration:none}
+.foot-links a:hover,.footer .u{text-decoration:underline;text-underline-offset:3px}
+.foot-bottom{display:flex;justify-content:space-between;gap:16px;border-top:1px solid rgba(255,255,255,.22);padding-block:18px 22px;font-size:11.5px}
+@media (max-width:860px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.foot-grid{grid-template-columns:1fr}}
+
+/* cart drawer */
+.scrim{position:fixed;inset:0;background:rgba(11,11,14,.5);z-index:80;opacity:0;pointer-events:none;transition:opacity .2s}
+.scrim.open{opacity:1;pointer-events:auto}
+.drawer{visibility:hidden;position:fixed;top:0;right:0;bottom:0;z-index:90;width:min(420px,100%);background:var(--white);display:flex;flex-direction:column;transform:translateX(100%);transition:transform .25s ease;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);padding-right:env(safe-area-inset-right,0px)}
+.drawer.open{transform:none;visibility:visible}
+.drawer:not(.open){transition:transform .25s ease,visibility 0s .25s}
+.drawer-head{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid var(--line)}
+.drawer-head h2{font:900 22px/1 var(--display);font-stretch:110%;letter-spacing:-.02em;margin:0}
+.drawer .icon-btn{color:var(--ink);border-color:var(--line)}
+.cart-items{flex:1;overflow-y:auto;padding:8px 20px}
+.cart-empty{color:var(--muted);text-align:center;padding:48px 8px;font-size:14.5px}
+.line{display:grid;grid-template-columns:56px minmax(0,1fr) auto;gap:12px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.line img{width:56px;height:56px;object-fit:contain;border-radius:8px;background:var(--mist)}
+.line b{display:block;font-size:14.5px}
+.line small{color:var(--muted);font-size:12.5px}
+.qty{display:flex;align-items:center;gap:6px;margin-top:6px}
+.qty button{width:28px;height:28px;border-radius:7px;border:1px solid var(--line);background:var(--white);cursor:pointer;font-weight:700;color:var(--ink)}
+.qty span{min-width:18px;text-align:center;font-weight:600;font-size:13.5px}
+.line-price{font-weight:700;font-variant-numeric:tabular-nums;font-size:14.5px}
+.drawer-foot{max-height:70vh;overflow-y:auto;padding:18px 20px 20px;border-top:1px solid var(--line);display:grid;gap:10px}
+.subtotal{display:flex;justify-content:space-between;font-weight:700;font-size:16px;font-variant-numeric:tabular-nums}
+.drawer-foot p{margin:0;color:var(--muted);font-size:12.5px;line-height:1.5}
+.pickup-form{display:grid;gap:10px}
+.pickup-form .field label{margin-bottom:5px}
+.field select{width:100%;height:46px;border-radius:9px;border:1.5px solid #CDBDE6;background:var(--white);color:var(--ink);padding:0 10px;font:inherit;font-size:15px}
+.field select:focus{outline:none;border-color:var(--ink)}
+.field .opt{font-weight:400;color:var(--muted)}
+.drawer .form-msg{margin:0}
+.form-msg.err{color:#B3261E}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--ink);color:var(--white);padding:12px 18px;border-radius:10px;font-weight:600;font-size:14px;opacity:0;transition:opacity .2s,transform .2s;z-index:100;pointer-events:none;white-space:nowrap}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+/* audience split */
+.paths-sec{padding-block:clamp(28px,4vw,40px) 0}
+.paths{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.path{display:flex;flex-direction:column;gap:10px;border-radius:var(--r);padding:clamp(22px,3vw,30px);text-decoration:none;transition:transform .15s}
+.path:hover{transform:translateY(-2px)}
+.path h2{font:900 clamp(24px,2.6vw,30px)/1.05 var(--display);font-stretch:110%;letter-spacing:-.03em;margin:0}
+.path p{margin:0;font-size:15px;max-width:42ch;flex:1}
+.path-tag{font:700 11px/1 var(--body);letter-spacing:.14em;text-transform:uppercase}
+.path-go{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;margin-top:6px}
+.path-train{background:var(--ink);color:var(--white)}
+.path-train .path-tag{color:var(--lav)}
+.path-train p{color:var(--on-dark-muted)}
+.path-sip{background:var(--lav-soft);color:var(--ink)}
+.path-sip .path-tag,.path-sip .path-go{color:var(--purple-d)}
+.path-sip p{color:var(--muted)}
+@media (max-width:700px){.paths{grid-template-columns:1fr}}
+.checks{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:10px;font-weight:600;font-size:15px}
+.checks li{display:flex;gap:10px;align-items:center}
+.checks .ico{color:var(--purple)}
+.book-form{color:var(--on-dark)}
+.plan-chip{margin:0 0 16px;padding:10px 12px;border-radius:9px;background:rgba(183,160,221,.14);color:var(--lav);font-weight:600;font-size:13.5px}
+.hours-card{border:1px solid var(--line)}
+/* abstract shapes: orbits, planets, dot fields, light beams */
+.has-deco{position:relative;overflow:hidden;isolation:isolate}
+.has-deco>.wrap{position:relative;z-index:1}
+.deco{position:absolute;pointer-events:none;z-index:0;--line:rgba(123,94,167,.2);--dot:rgba(123,94,167,.28)}
+.dark .deco,.magnet .deco,.footer .deco{--line:rgba(196,178,232,.2);--dot:rgba(196,178,232,.32)}
+.orbit{border:1px solid var(--line);border-radius:50%;transform:rotate(var(--tilt,-16deg))}
+.orbit::after{content:"";position:absolute;width:var(--p,10px);height:var(--p,10px);border-radius:50%;background:var(--planet,var(--purple));top:var(--py,6%);left:var(--px,70%);box-shadow:0 0 0 6px rgba(123,94,167,.08)}
+.dark .orbit::after,.magnet .orbit::after{--planet:var(--lav)}
+.orbit.ring2{border-style:dashed;border-color:var(--line)}
+.orbit.ring2::after{display:none}
+.dots{background-image:radial-gradient(var(--dot) 1.1px,transparent 1.5px);background-size:16px 16px;-webkit-mask-image:radial-gradient(closest-side,#000 30%,transparent);mask-image:radial-gradient(closest-side,#000 30%,transparent)}
+.beam{height:1px;background:linear-gradient(90deg,transparent,var(--line) 30%,var(--line) 70%,transparent);transform:rotate(-28deg);transform-origin:left center}
+.beam.glow{height:2px;background:linear-gradient(90deg,transparent,rgba(183,160,221,.55) 40%,rgba(183,160,221,.55) 60%,transparent)}
+@media (prefers-reduced-motion:no-preference){
+  .orbit.spin{animation:pj-drift 40s linear infinite}
+  @keyframes pj-drift{to{transform:rotate(calc(var(--tilt,-16deg) + 360deg))}}
+}
+@media (max-width:700px){.deco.hide-sm{display:none}.orbit{opacity:.7}}
+/* motion: hover lift, image zoom, arrow nudge, scroll ease-in, cart bump */
+@media (prefers-reduced-motion:no-preference){
+  .card,.svc,.pkg,.prod,.extra,.path,.hours-card{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+  .card:hover,.svc:hover,.prod:hover,.extra:hover,.hours-card:hover{transform:translateY(-4px);box-shadow:0 14px 30px -14px rgba(60,40,100,.28)}
+  .pkg:hover{transform:translateY(-4px);box-shadow:0 18px 40px -18px rgba(0,0,0,.6)}
+  .prod-img img,.svc-img img,.svc-top img{transition:transform .4s ease}
+  .prod:hover .prod-img img,.svc:hover .svc-img img{transform:scale(1.05)}
+  .svc:hover .svc-top img{transform:scale(1.04)}
+  .btn .ico,.path-go .ico{transition:transform .2s ease}
+  .btn:hover .ico,.path:hover .path-go .ico{transform:translateX(3px)}
+  .chip{transition:background .15s,border-color .15s,color .15s,transform .15s}
+  .chip:hover{transform:translateY(-1px)}
+  .faq summary{transition:color .15s}
+  .faq summary:hover{color:var(--purple)}
+  .js .reveal{transform:translateY(22px);transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+  .js .reveal.in{transform:none}
+  .hero-media img{transition:translate .5s ease-out}
+  .cart-count.bump{animation:pj-bump .45s ease}
+  @keyframes pj-bump{0%{transform:scale(1)}40%{transform:scale(1.35)}100%{transform:scale(1)}}
+  .orbit::after{animation:pj-pulse 4s ease-in-out infinite}
+  @keyframes pj-pulse{50%{box-shadow:0 0 0 10px rgba(123,94,167,0)}}
+}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 48 48">
+    <circle cx="24" cy="24" r="15" fill="none" stroke="currentColor" stroke-width="3.4"/>
+    <path d="M5.5 33.5C1.8 37 2 40.2 5 41c4.6 1.3 15-3.4 24.6-10.4C39.3 23.6 46 15.4 44.7 11.3c-.8-2.6-4.2-2.8-8.6-.4" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"/>
+    <path d="M17 31c0-8.6 5.4-13.8 14-14.3.3 8.8-5 14.4-14 14.3Z" fill="currentColor"/>
+    <path d="M17.5 30.5 26 22.5" stroke="var(--logo-vein,#0B0B0E)" stroke-width="1.6" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14c1.9.7 3 2.9 3 6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.5 3 8.3 7 10 4-1.7 7-5.5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-bowl" viewBox="0 0 24 24"><path d="M3 11h18a9 9 0 0 1-18 0Z"/><path d="M8 7c0-1.5 1-2 1-3M12 7c0-1.5 1-2 1-3M16 7c0-1.5 1-2 1-3"/></symbol>
+  <symbol id="i-cup" viewBox="0 0 24 24"><path d="M6 6h12l-1.5 15h-9L6 6Z"/><path d="M13 6l2-4"/><path d="M6.6 11h10.8"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.3"/><path d="M12 17h.01"/></symbol>
+  <symbol id="i-userx" viewBox="0 0 24 24"><circle cx="10" cy="8" r="4"/><path d="M3 21c0-3.9 3.1-7 7-7 1.4 0 2.6.4 3.7 1"/><path d="m17 15 4 4M21 15l-4 4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2.5 2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8L12 2.5Z"/></symbol>
+</svg>
+
+<div class="topbar"><div class="wrap">Real Fruit. Real Nutrition.<span class="dot">·</span>13615 Eureka Rd, Southgate<span class="dot">·</span><span id="open-status">Open today</span></div></div>
+
+<header class="header" id="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Planet Juice home"><img class="logo-img" src="assets/logo.png" alt="" width="259" height="216">PLANET JUICE</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#services">Coaching</a><a href="#results">Results</a><a href="#packages">Pricing</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#visit">Visit</a>
+    </nav>
+    <div class="hdr-actions">
+      <button class="icon-btn" type="button" id="cart-open" aria-label="Open cart"><svg class="ico"><use href="#i-bag"/></svg><span class="cart-count" data-n="0" id="cart-count">0</span></button>
+      <a class="btn btn-line" href="#book">Book Free Call</a>
+      <a class="btn btn-purple" href="#menu">Order Now</a>
+      <button class="icon-btn menu-toggle" type="button" id="menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu"><svg class="ico"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <nav class="wrap" aria-label="Mobile">
+      <a href="#services">Coaching</a><a href="#results">Results</a><a href="#packages">Pricing</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#visit">Visit</a>
+      <a class="btn btn-purple btn-lg" href="#book" style="border:0">Book Your Free Call</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero dark">
+  <picture class="hero-media"><source media="(max-width:700px)" srcset="assets/hero-sm.webp"><img src="assets/hero.webp" alt="Planet Juice smoothie, refresher, wellness shot and power bowls" width="1774" height="887" fetchpriority="high"></picture>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="pill">Southgate, MI · Coaching in person &amp; online</span>
+        <h1 class="h-display">Transform Your Body. <span>Fuel Your Life.</span></h1>
+        <p class="lead">Train with a certified coach, eat from a plan made for you and refuel with real-fruit smoothies. All under one roof on Eureka Road.</p>
+        <div class="cta-row">
+          <a class="btn btn-purple btn-lg" href="#book">Book Your Free Call <svg class="ico"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-line btn-lg" href="#menu">Order a Smoothie</a>
+          <a class="txt-link" href="#services">See programs</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="stats">
+      <div class="stat"><svg class="ico"><use href="#i-users"/></svg>500+ Clients Coached</div>
+      <div class="stat"><svg class="ico"><use href="#i-shield"/></svg>Certified Personal Trainer</div>
+      <div class="stat"><svg class="ico"><use href="#i-bowl"/></svg>Custom Meal Plans</div>
+      <div class="stat"><svg class="ico"><use href="#i-cup"/></svg>Real-Fruit Smoothies</div>
+    </div>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true"><div class="wrap"><span>Real Fruit.</span><span>Real Nutrition.</span><span>Real Coaching.</span><span>Planet Juice.</span></div></div>
+
+<section class="paths-sec">
+  <div class="wrap paths">
+    <a class="path path-train" href="#services">
+      <span class="path-tag">Here to train</span>
+      <h2>Start your transformation</h2>
+      <p>1-on-1, group and online coaching with a meal plan to match. Your first call is free.</p>
+      <span class="path-go">Explore coaching <svg class="ico"><use href="#i-arrow"/></svg></span>
+    </a>
+    <a class="path path-sip" href="#menu">
+      <span class="path-tag">Here for a smoothie</span>
+      <h2>Grab something real</h2>
+      <p>Real-fruit smoothies, açaí bowls and protein shakes. Pick up on Eureka Road or get it delivered.</p>
+      <span class="path-go">See the menu <svg class="ico"><use href="#i-arrow"/></svg></span>
+    </a>
+  </div>
+</section>
+
+<section class="has-deco section" id="why">
+  <span class="deco orbit" style="width:520px;height:220px;top:40px;right:-160px;--tilt:-14deg" aria-hidden="true"></span><span class="deco dots hide-sm" style="width:220px;height:220px;top:24px;right:180px" aria-hidden="true"></span>
+  <div class="wrap">
+    <p class="eyebrow">Sound familiar?</p>
+    <h2 class="h-display" style="max-width:16ch">Working hard but not seeing results?</h2>
+    <div class="prob-grid">
+      <div class="card"><div class="ico-box"><svg class="ico"><use href="#i-clock"/></svg></div><h3>No real plan</h3><p>You put in the hours, but without a program every session is a guess.</p></div>
+      <div class="card"><div class="ico-box"><svg class="ico"><use href="#i-help"/></svg></div><h3>Mixed messages on food</h3><p>Every diet says something different, and none of them fit your schedule.</p></div>
+      <div class="card"><div class="ico-box"><svg class="ico"><use href="#i-userx"/></svg></div><h3>Nobody in your corner</h3><p>Motivation fades fast when you're on your own. So you stop, then start over.</p></div>
+    </div>
+    <div class="mission">
+      <div>
+        <p class="eyebrow">Why Planet Juice</p>
+        <h2 class="h-display">Coaching, nutrition and fuel in one place.</h2>
+        <p>You shouldn't have to piece it together yourself. We train you, help you with what you eat and keep you on track, and our shop keeps you fueled in between.</p>
+      </div>
+      <img class="logo-img" src="assets/logo.png" alt="" width="259" height="216">
+    </div>
+  </div>
+</section>
+
+<section class="has-deco section mist" id="services">
+  <span class="deco orbit ring2" style="width:640px;height:640px;bottom:-380px;left:-260px" aria-hidden="true"></span><span class="deco beam hide-sm" style="width:520px;top:120px;right:-60px" aria-hidden="true"></span>
+  <div class="wrap">
+    <p class="eyebrow">Coaching &amp; nutrition</p>
+    <h2 class="h-display">Choose the program that works for you.</h2>
+    <p class="lead" style="max-width:40ch">In the gym, on a video call or on your own schedule. Every option comes with a plan built for you.</p>
+
+    <div class="group-label">Training</div>
+    <div class="svc-grid">
+      <article class="svc"><div class="svc-top"><img src="assets/personal-training.webp" alt="Personal trainer reviewing a workout plan with a client in the gym" loading="lazy" width="1200" height="800" style="object-position:50% 25%"><span aria-hidden="true">1:1</span></div><div class="svc-body"><h3>1-on-1 Personal Training</h3><p>Private sessions in person or online, a program written for you and a check-in every week.</p><div class="price-tag">From $150 / session</div><a class="btn btn-line" href="#book" data-goal="Build muscle">Book a Session</a></div></article>
+      <article class="svc"><div class="svc-top"><img src="assets/group-training.webp" alt="Trainer going over a plan with two clients during a group session" loading="lazy" width="1200" height="800" style="object-position:55% 30%"><span aria-hidden="true">GROUP</span></div><div class="svc-body"><h3>Group Training</h3><p>Train with a small crew that shows up for each other. Same coaching, lower price.</p><div class="price-tag">$25 / class</div><a class="btn btn-line" href="#book">Join a Class</a></div></article>
+      <article class="svc"><div class="svc-top"><img src="assets/online-coaching.webp" alt="Client on a video coaching call from his home desk" loading="lazy" width="1200" height="800" style="object-position:40% 40%"><span aria-hidden="true">ONLINE</span></div><div class="svc-body"><h3>Online Coaching</h3><p>Your program in an app, regular check-ins and video form reviews, wherever you train.</p><div class="price-tag">From $199 / month</div><a class="btn btn-line" href="#book" data-goal="Train online">Start Online</a></div></article>
+    </div>
+
+    <div class="group-label">Nutrition</div>
+    <div class="svc-grid">
+      <article class="svc"><div class="svc-img"><img src="assets/nutri-meal-plans.webp" alt="Steak, chicken and falafel meal bowls side by side" width="1000" height="347" loading="lazy"></div><div class="svc-body"><h3>Custom Meal Plans</h3><p>Meals built around your goal, your schedule and the foods you actually like.</p><div class="price-tag">From $75 / plan</div><a class="btn btn-line" href="#book" data-goal="Eat better">Get My Plan</a></div></article>
+      <article class="svc"><div class="svc-img"><img src="assets/nutri-consulting.webp" alt="Nutrition planner on a clipboard beside a chicken bowl" width="1000" height="347" loading="lazy"></div><div class="svc-body"><h3>Nutrition Consulting</h3><p>One focused session to review how you eat now and map out exactly what to change.</p><div class="price-tag">$120</div><a class="btn btn-line" href="#book" data-goal="Eat better">Book a Consult</a></div></article>
+      <article class="svc"><div class="svc-img"><img src="assets/nutri-transformation.webp" alt="Dumbbells, a progress journal, a steak bowl and protein powder" width="1000" height="347" loading="lazy"></div><div class="svc-body"><h3>Transformation Packages</h3><p>8 or 12 weeks of training, nutrition, check-ins and supplements, all included.</p><div class="price-tag">From $497</div><a class="btn btn-line" href="#packages">Compare Packages</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="has-deco section" id="results">
+  <span class="deco dots" style="width:260px;height:260px;top:-40px;left:-80px" aria-hidden="true"></span><span class="deco orbit hide-sm" style="width:200px;height:84px;top:72px;right:60px;--tilt:-20deg;--p:8px;--px:18%;--py:4%" aria-hidden="true"></span>
+  <div class="wrap">
+    <p class="eyebrow">Results</p>
+    <h2 class="h-display">Real people. Real transformations.</h2>
+    <p class="lead">Clients training here in Southgate and online across the country.</p>
+    <div class="rev-grid" id="reviews"></div>
+  </div>
+</section>
+
+<section class="has-deco section dark" id="packages">
+  <span class="deco orbit spin" style="width:900px;height:360px;top:-120px;left:50%;margin-left:-450px;--tilt:-10deg;--p:12px" aria-hidden="true"></span><span class="deco beam glow hide-sm" style="width:640px;bottom:90px;left:-120px" aria-hidden="true"></span><span class="deco beam hide-sm" style="width:640px;bottom:60px;left:-80px" aria-hidden="true"></span>
+  <div class="wrap center">
+    <p class="eyebrow">Monthly packages</p>
+    <h2 class="h-display">Choose your plan.</h2>
+    <p class="lead">Billed monthly. Cancel anytime. Not sure which fits? Ask us on your free call.</p>
+    <div class="pkg-grid" style="text-align:left">
+      <article class="pkg"><h3>Starter</h3><div class="amt"><b>$149</b><span>/month</span></div>
+        <ul><li><svg class="ico"><use href="#i-check"/></svg>2 sessions per week</li><li><svg class="ico"><use href="#i-check"/></svg>Basic meal guidance</li><li><svg class="ico"><use href="#i-check"/></svg>Check-in call every two weeks</li><li><svg class="ico"><use href="#i-check"/></svg>Workout app access</li></ul>
+        <a class="btn btn-white btn-lg" href="#book" data-plan="Starter">Choose Starter</a></article>
+      <article class="pkg featured"><span class="badge">Most popular</span><h3>Elite</h3><div class="amt"><b>$297</b><span>/month</span></div>
+        <ul><li><svg class="ico"><use href="#i-check"/></svg>4 sessions per week</li><li><svg class="ico"><use href="#i-check"/></svg>Full custom meal plan</li><li><svg class="ico"><use href="#i-check"/></svg>Weekly 1-on-1 check-ins</li><li><svg class="ico"><use href="#i-check"/></svg>Supplement stack included</li><li><svg class="ico"><use href="#i-check"/></svg>Priority messaging</li></ul>
+        <a class="btn btn-ink btn-lg" href="#book" data-plan="Elite">Choose Elite</a></article>
+      <article class="pkg"><h3>Champion</h3><div class="amt"><b>$497</b><span>/month</span></div>
+        <ul><li><svg class="ico"><use href="#i-check"/></svg>Unlimited sessions</li><li><svg class="ico"><use href="#i-check"/></svg>Fully custom nutrition</li><li><svg class="ico"><use href="#i-check"/></svg>Daily support and messaging</li><li><svg class="ico"><use href="#i-check"/></svg>Monthly merch credit</li><li><svg class="ico"><use href="#i-check"/></svg>Priority scheduling</li></ul>
+        <a class="btn btn-white btn-lg" href="#book" data-plan="Champion">Choose Champion</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="has-deco section" id="book">
+  <span class="deco orbit" style="width:300px;height:300px;top:-110px;left:-120px;--p:9px;--px:84%;--py:72%" aria-hidden="true"></span><span class="deco dots hide-sm" style="width:240px;height:240px;bottom:20px;right:-40px" aria-hidden="true"></span>
+  <div class="wrap book-grid">
+    <div>
+      <p class="eyebrow">Free 15-minute call</p>
+      <h2 class="h-display">Not sure where to start? Give us a call.</h2>
+      <p class="lead">Share your goal and we'll recommend you the right program, whether it's training, nutrition, or both.</p>
+      <ul class="checks">
+        <li><svg class="ico"><use href="#i-check"/></svg>Free, with no commitment</li>
+        <li><svg class="ico"><use href="#i-check"/></svg>A clear next step for your goal</li>
+        <li><svg class="ico"><use href="#i-check"/></svg>A reply within one business day</li>
+      </ul>
+    </div>
+    <form class="book-form js-form" name="free-call" method="POST" action="/api/leads" id="call-form">
+      <input type="hidden" name="plan" id="plan-field" value="">
+      <p class="sr"><label>Company <input name="company" tabindex="-1" autocomplete="off"></label></p>
+      <p class="plan-chip" id="plan-chip" hidden></p>
+      <div class="field"><label for="bc-name">Name</label><input id="bc-name" name="name" placeholder="Your name" autocomplete="name" required></div>
+      <div class="field"><label for="bc-contact">Phone or email</label><input id="bc-contact" name="contact" placeholder="(734) 555-0100 or you@email.com" required></div>
+      <fieldset class="goal-set">
+        <legend>What's your main goal?</legend>
+        <div class="goals">
+          <label><input type="radio" name="goal" value="Lose weight" id="g1" checked><span>Lose weight</span></label>
+          <label><input type="radio" name="goal" value="Build muscle" id="g2"><span>Build muscle</span></label>
+          <label><input type="radio" name="goal" value="Eat better" id="g3"><span>Eat better</span></label>
+          <label><input type="radio" name="goal" value="Train online" id="g4"><span>Train online</span></label>
+        </div>
+      </fieldset>
+      <button class="btn btn-purple btn-lg btn-block" type="submit">Request My Free Call</button>
+      <p class="fineprint">We'll reach out by phone or email, whichever you entered.</p>
+      <p class="form-msg" role="status" id="call-msg" hidden></p>
+    </form>
+  </div>
+</section>
+
+<section class="has-deco section mist" id="menu">
+  <span class="deco beam hide-sm" style="width:560px;top:96px;right:-120px" aria-hidden="true"></span>
+  <div class="wrap">
+    <p class="eyebrow">Smoothie bar</p>
+    <div class="menu-head">
+      <h2 class="h-display">Real fruit, made to order.</h2>
+      <button class="btn btn-line" type="button" id="cart-open-2">View Cart · <span id="cart-count-2">0</span></button>
+    </div>
+    <div class="chips" id="chips" role="group" aria-label="Menu categories"></div>
+    <p class="menu-note" id="menu-note">Every smoothie is 16oz for $7.99 or 24oz for $8.99. Swap in almond or oat milk for $0.50. Want it as a juice? Just ask at the counter.</p>
+    <div class="prod-grid" id="products"></div>
+    <div class="extras">
+      <div class="extra"><div class="extra-top"><h3>Nutrition Add-Ons</h3><b>$1.99 each</b></div><p>Boost any drink with Fat Burner, Caffeine, Recovery, Immune, Vitamin C, Collagen, Creatine, Pump or Omega-3. Protein options in store.</p></div>
+      <div class="extra"><div class="extra-top"><h3>Build Your Own Açaí Bowl</h3><b>$9.99</b></div><p>Pick a base (Organic Açaí, Dragonfruit, Ube, Blue Spirulina, Mango or Coconut) and up to four toppings. Extra toppings are $0.75 each.</p><div class="extra-pics"><figure><img src="assets/base-acai.webp" alt="" loading="lazy"><figcaption>Açaí</figcaption></figure><figure><img src="assets/base-pitaya.webp" alt="" loading="lazy"><figcaption>Dragonfruit</figcaption></figure><figure><img src="assets/base-ube.webp" alt="" loading="lazy"><figcaption>Ube</figcaption></figure><figure><img src="assets/base-spirulina.webp" alt="" loading="lazy"><figcaption>Blue Spirulina</figcaption></figure></div></div>
+      <div class="extra"><div class="extra-top"><h3>Pre-Workout</h3><b>$3.49</b></div><p>Three strength levels. Ask at the counter which one fits your training.</p><div class="extra-pics"><figure><img src="assets/pre-level1.webp" alt="" loading="lazy"><figcaption>Level 1 · Focus</figcaption></figure><figure><img src="assets/pre-level2.webp" alt="" loading="lazy"><figcaption>Level 2 · Intense</figcaption></figure><figure><img src="assets/pre-level3.webp" alt="" loading="lazy"><figcaption>Level 3 · Extreme</figcaption></figure></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="has-deco section" id="about">
+  <span class="deco orbit hide-sm" style="width:420px;height:170px;top:-30px;left:54%;--tilt:-8deg;--p:8px;--px:88%;--py:20%" aria-hidden="true"></span>
+  <div class="wrap">
+    <p class="eyebrow">Inside the shop</p>
+    <div class="shop-head">
+      <h2 class="h-display">Simple food that fits your day.</h2>
+      <p>Walk in on Eureka Road and the mural is the first thing you'll see. Everything behind the counter starts with real fruit.</p>
+    </div>
+    <figure class="mural">
+      <img src="assets/mural.jpg" alt="Graffiti mural spelling Planet Juice in yellow and purple letters on a red and yellow background" loading="lazy" width="1800" height="599">
+      <figcaption>The wall at Planet Juice, Southgate.</figcaption>
+    </figure>
+    <div class="pillars">
+      <div class="pillar"><h3>Real Ingredients</h3><p>Real fruit is the starting point for every cup we make.</p></div>
+      <div class="pillar"><h3>Fits Your Routine</h3><p>Before work, after a workout or anytime in between.</p></div>
+      <div class="pillar"><h3>Certified Coaching</h3><p>We build your plan around your life, in person or online.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="has-deco section magnet" id="meal-plan">
+  <span class="deco orbit ring2" style="width:520px;height:520px;top:50%;left:-200px;margin-top:-260px" aria-hidden="true"></span><span class="deco orbit hide-sm" style="width:360px;height:360px;top:50%;left:-120px;margin-top:-180px;--p:10px;--px:92%;--py:40%" aria-hidden="true"></span><span class="deco orbit hide-sm" style="width:420px;height:420px;top:-160px;right:-160px;--tilt:20deg;--p:8px;--px:10%;--py:70%" aria-hidden="true"></span>
+  <div class="wrap center">
+    <p class="eyebrow">Free download</p>
+    <h2 class="h-display">Get your 7-day meal plan, free.</h2>
+    <p class="lead">The same starter plan our clients use in their first week. Enter your email and it's yours.</p>
+    <form name="meal-plan" method="POST" action="/api/subscribe" class="js-form" id="meal-form">
+      <p class="sr"><label>Company <input name="company" tabindex="-1" autocomplete="off"></label></p>
+      <div class="field"><label for="mp-name">First name</label><input id="mp-name" name="first_name" placeholder="Jordan" autocomplete="given-name" required></div>
+      <div class="field"><label for="mp-email">Email address</label><input id="mp-email" name="email" type="email" placeholder="you@email.com" autocomplete="email" required></div>
+      <button class="btn btn-ink btn-lg" type="submit">Send My Free Plan</button>
+    </form>
+    <p class="fineprint">No spam. Unsubscribe anytime.</p>
+    <p class="form-msg" role="status" id="meal-msg" hidden></p>
+  </div>
+</section>
+
+<section class="has-deco section mist" id="faq">
+  <span class="deco dots hide-sm" style="width:280px;height:280px;top:40px;right:6%" aria-hidden="true"></span>
+  <div class="wrap center">
+    <p class="eyebrow">FAQ</p>
+    <h2 class="h-display">Questions, answered.</h2>
+    <div class="faq">
+      <details open><summary>How much does coaching cost?<svg class="ico"><use href="#i-chev"/></svg></summary><p>Group classes are $25 and 1-on-1 sessions start at $150. Monthly packages are $149 (Starter), $297 (Elite) and $497 (Champion). Online coaching starts at $199 a month.</p></details>
+      <details><summary>Can I train with you online?<svg class="ico"><use href="#i-chev"/></svg></summary><p>Yes. Online Coaching gives you an app-based program, regular check-ins and video feedback on your form. 1-on-1 sessions can also be done virtually.</p></details>
+      <details><summary>Do I need my own gym equipment?<svg class="ico"><use href="#i-chev"/></svg></summary><p>Let us know what you have access to on your free call, and your program will be built around it, whether you train in a gym, at home or online.</p></details>
+      <details><summary>Is the 7-day meal plan really free?<svg class="ico"><use href="#i-chev"/></svg></summary><p>Yes. Enter your first name and email in the meal plan form and we'll send it to your inbox.</p></details>
+      <details><summary>Can I swap the milk in my smoothie?<svg class="ico"><use href="#i-chev"/></svg></summary><p>Yes. Almond or oat milk is $0.50 extra on any smoothie. Protein smoothies can also be made with coconut milk for the same $0.50.</p></details>
+      <details><summary>Do you deliver?<svg class="ico"><use href="#i-chev"/></svg></summary><p>Yes, through DoorDash. Delivery areas, prices and hours on DoorDash may differ from the shop.</p></details>
+      <details><summary>What are your hours?<svg class="ico"><use href="#i-chev"/></svg></summary><p>Monday to Friday 9am to 10pm, Saturday 9am to 9pm and Sunday 10am to 7pm. Holiday hours may vary.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="has-deco section visit" id="visit">
+  <span class="deco orbit" style="width:560px;height:230px;bottom:-60px;right:-140px;--tilt:-18deg;--px:22%;--py:2%" aria-hidden="true"></span>
+  <div class="wrap visit-grid">
+    <div>
+      <p class="eyebrow">Visit us</p>
+      <h2 class="h-display">Stop in.<br>Or order in.</h2>
+      <p class="lead">Smoothies, protein shakes and açaí bowls on Eureka Road, plus the place to start your training.</p>
+      <div class="cta-row">
+        <a class="btn btn-purple btn-lg js-doordash" href="#" target="_blank" rel="noopener">Order on DoorDash</a>
+        <a class="btn btn-line btn-lg" href="https://www.google.com/maps/dir/?api=1&amp;destination=13615+Eureka+Rd,+Southgate,+MI+48195" target="_blank" rel="noopener">Get Directions</a>
+      </div>
+      <p class="small-note">Delivery areas, prices and hours on DoorDash may differ from the shop.</p>
+    </div>
+    <div class="hours-card">
+      <p class="eyebrow">Planet Juice / Southgate, MI</p>
+      <address>13615 Eureka Rd<br>Southgate, MI 48195</address>
+      <a class="phone" href="tel:+17344442819">(734) 444-2819</a>
+      <h3>Store Hours</h3>
+      <table class="hours" id="hours-table">
+        <tr data-days="1,2,3,4,5"><td>Monday to Friday</td><td>9am to 10pm</td></tr>
+        <tr data-days="6"><td>Saturday</td><td>9am to 9pm</td></tr>
+        <tr data-days="0"><td>Sunday</td><td>10am to 7pm</td></tr>
+      </table>
+      <p class="small-note">Holiday hours may vary.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="has-deco footer">
+  <span class="deco beam hide-sm" style="width:700px;top:40px;right:-100px" aria-hidden="true"></span><span class="deco dots hide-sm" style="width:200px;height:200px;bottom:10px;left:30%" aria-hidden="true"></span>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><img class="logo-img" src="assets/logo.png" alt="" width="259" height="216"><p class="foot-tag">Real Fruit.<br>Real Nutrition.</p><p>Planet Juice in Southgate, Michigan. Training, nutrition and real-fruit everyday favorites.</p></div>
+      <div><h4>Explore</h4><ul class="foot-links"><li><a href="#services">Coaching</a></li><li><a href="#packages">Pricing</a></li><li><a href="#menu">Smoothie Menu</a></li><li><a href="#book">Book a Free Call</a></li></ul></div>
+      <div><h4>Visit Southgate</h4><p style="font-size:13px">13615 Eureka Rd<br>Southgate, MI 48195</p><p style="margin-top:10px;font-size:13px"><a class="u" href="tel:+17344442819">(734) 444-2819</a></p><p style="margin-top:10px;font-size:13px">Mon to Fri 9am to 10pm<br>Sat 9am to 9pm · Sun 10am to 7pm</p></div>
+      <div><h4>Stay Connected</h4><ul class="foot-links"><li><a class="u" href="https://www.instagram.com/planetjuiceee/" target="_blank" rel="noopener">Instagram · @planetjuiceee</a></li><li><a class="u js-doordash" href="#" target="_blank" rel="noopener">Order on DoorDash</a></li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>© <span id="yr">2026</span> Planet Juice. All rights reserved.</span><a class="u" href="#top">Back to top ↑</a></div>
+  </div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Your cart" aria-hidden="true">
+  <div class="drawer-head"><h2>Your Cart</h2><button class="icon-btn" type="button" id="cart-close" aria-label="Close cart"><svg class="ico"><use href="#i-x"/></svg></button></div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="drawer-foot">
+    <div class="subtotal"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+    <button class="btn btn-purple btn-lg" type="button" id="pickup-open">Order Ahead for Pickup</button>
+    <form class="pickup-form" id="pickup-form" action="/api/orders" method="POST" hidden>
+      <p class="sr"><label>Company <input name="company" tabindex="-1" autocomplete="off"></label></p>
+      <div class="field"><label for="pu-name">Name</label><input id="pu-name" name="name" autocomplete="name" required maxlength="80"></div>
+      <div class="field"><label for="pu-phone">Phone</label><input id="pu-phone" name="phone" type="tel" autocomplete="tel" required maxlength="30" placeholder="(734) 555-0100"></div>
+      <div class="field"><label for="pu-time">Pickup time</label><select id="pu-time" name="pickup"></select></div>
+      <div class="field"><label for="pu-notes">Notes <span class="opt">(optional)</span></label><input id="pu-notes" name="notes" maxlength="200" placeholder="Oat milk, no ice…"></div>
+      <button class="btn btn-purple btn-lg btn-block" type="submit">Place Order · Pay in Store</button>
+    </form>
+    <p class="form-msg" role="status" id="pickup-msg" hidden></p>
+    <a class="btn btn-line btn-lg js-doordash" href="#" target="_blank" rel="noopener">Delivery on DoorDash</a>
+    <p>Order ahead and pay when you pick up on Eureka Road, get it delivered through DoorDash, or call us at <a class="u" href="tel:+17344442819">(734) 444-2819</a>.</p>
+  </div>
+</aside>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  /* ---- Settings: update these ---- */
+  var DOORDASH_URL = "https://www.doordash.com/store/planet-juice-southgate-30234389/39308575/";
+  var TZ = "America/Detroit";
+
+  /* Menu, prices and categories live in data/menu.json, which the server
+     also reads to price pickup orders. Edit prices there, in one place. */
+  var PRODUCTS = [], NOTES = {}, CATS = ["Smoothies"];
+  var REVIEWS = [
+    ["I lost 32 lbs in 3 months with Planet Juice. Ewah’s meal plans are the real deal. I never felt hungry once.","Marcus T.","Detroit, MI","av-p"],
+    ["The transformation package was the best investment I’ve made in myself. Down 4 dress sizes and feeling incredible.","Jasmine R.","Atlanta, GA","av-i"],
+    ["I’ve tried every gym and trainer. None of them gave me results like this. The online coaching is elite.","Derek B.","Chicago, IL","av-l"],
+    ["Planet Juice smoothies and supplements are top tier. I feel the difference every single day.","Keisha M.","Houston, TX","av-l"],
+    ["Ewah holds you accountable like no one else. Best decision I made was booking that free call.","Andre W.","Detroit, MI","av-p"],
+    ["Lost 18 lbs and gained so much muscle. The meal prep service changed my whole life.","Tanya L.","Cleveland, OH","av-i"]
+  ];
+
+  var $ = function(s,r){return (r||document).querySelector(s)};
+  var $$ = function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+  var money = function(n){return "$"+n.toFixed(2)};
+  var esc = function(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
+
+  $$(".js-doordash").forEach(function(a){a.href = DOORDASH_URL});
+  $("#yr").textContent = new Date().getFullYear();
+
+  /* reviews */
+  var star = '<svg viewBox="0 0 24 24"><use href="#i-star"/></svg>';
+  $("#reviews").innerHTML = REVIEWS.map(function(r){
+    var ini = r[1].split(" ").map(function(w){return w[0]}).join("").replace(".","");
+    return '<figure class="card rev" style="margin:0"><div class="stars" aria-label="5 out of 5 stars">'+star+star+star+star+star+'</div><blockquote>“'+esc(r[0])+'”</blockquote><figcaption class="who"><span class="avatar '+r[3]+'" aria-hidden="true">'+ini+'</span><span><b>'+esc(r[1])+'</b><small>'+esc(r[2])+'</small></span></figcaption></figure>';
+  }).join("");
+
+  /* open status + today's hours */
+  var HOURS = {0:[10,19],1:[9,22],2:[9,22],3:[9,22],4:[9,22],5:[9,22],6:[9,21]};
+  function fmt(h){var ap=h>=12?"pm":"am";var x=h%12||12;return x+ap}
+  try{
+    var parts = new Intl.DateTimeFormat("en-US",{timeZone:TZ,weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());
+    var get = function(t){return (parts.filter(function(p){return p.type===t})[0]||{}).value};
+    var day = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(get("weekday"));
+    var hr = parseInt(get("hour"),10)%24 + parseInt(get("minute"),10)/60;
+    var h = HOURS[day], txt;
+    if(hr>=h[0] && hr<h[1]) txt = "Open now until "+fmt(h[1]);
+    else if(hr<h[0]) txt = "Opens today at "+fmt(h[0]);
+    else txt = "Closed now · Opens "+fmt(HOURS[(day+1)%7][0])+" tomorrow";
+    $("#open-status").textContent = txt;
+    $$("#hours-table tr").forEach(function(tr){ if(tr.dataset.days.split(",").indexOf(String(day))>-1) tr.classList.add("today") });
+  }catch(e){}
+
+  /* mobile nav */
+  var mt=$("#menu-toggle"), mn=$("#mobile-nav");
+  mt.addEventListener("click",function(){var o=mn.hidden; mn.hidden=!o; mt.setAttribute("aria-expanded",String(o)); mt.innerHTML='<svg class="ico"><use href="#i-'+(o?"x":"menu")+'"/></svg>'});
+  $$("#mobile-nav a").forEach(function(a){a.addEventListener("click",function(){mn.hidden=true;mt.setAttribute("aria-expanded","false");mt.innerHTML='<svg class="ico"><use href="#i-menu"/></svg>'})});
+
+  /* menu */
+  var current = "Smoothies";
+  function renderChips(){
+    $("#chips").innerHTML = CATS.map(function(c){return '<button class="chip" type="button" aria-pressed="'+(c===current)+'" data-cat="'+esc(c)+'">'+esc(c)+'</button>'}).join("");
+  }
+  function renderProducts(){
+    $("#menu-note").textContent = NOTES[current] || "Prices for this part of the menu are in store and on DoorDash.";
+    var list = PRODUCTS.filter(function(p){return current==="All"||p.cat===current});
+    if(!list.length){
+      $("#products").innerHTML = '<div class="empty-cat"><h3>'+esc(current)+': in store and on DoorDash</h3><p>This part of the menu isn\'t online yet. Order it at the counter on Eureka Road or through DoorDash.</p><a class="btn btn-purple js-doordash" href="'+DOORDASH_URL+'" target="_blank" rel="noopener">Order on DoorDash</a></div>';
+      return;
+    }
+    $("#products").innerHTML = list.map(function(p){
+      var top = '<article class="prod'+(p.sizes?'':' prod-info')+'" data-id="'+p.id+'"><div class="prod-img"><span class="cat-badge">'+esc(p.cat)+'</span><img src="'+p.img+'" alt="'+esc(p.name)+'" loading="lazy"></div><div class="prod-body"><h3>'+esc(p.name)+'</h3><p>'+esc(p.desc)+'</p>'+(p.stats?'<span class="nutri">'+esc(p.stats)+'</span>':'');
+      if(!p.sizes) return top+'<div class="prod-foot"><span class="instore">Price in store</span><a class="btn btn-line add js-doordash" href="'+DOORDASH_URL+'" target="_blank" rel="noopener">Order</a></div></div></article>';
+      return top+'<div class="sizes" role="group" aria-label="Size">'+
+        p.sizes.map(function(s,i){return '<button class="size" type="button" aria-pressed="'+(i===0)+'" data-i="'+i+'">'+s[0]+'<span class="size-p"> · '+money(s[1])+'</span></button>'}).join("")+
+        '</div><div class="prod-foot"><b class="price">'+money(p.sizes[0][1])+'</b><button class="btn btn-purple add" type="button"><svg class="ico"><use href="#i-plus"/></svg>Add</button></div></div></article>';
+    }).join("");
+  }
+  $("#chips").addEventListener("click",function(e){var b=e.target.closest(".chip"); if(!b) return; current=b.dataset.cat; renderChips(); renderProducts();});
+  $("#products").addEventListener("click",function(e){
+    var card = e.target.closest(".prod"); if(!card || card.classList.contains("prod-info")) return;
+    var p = PRODUCTS.filter(function(x){return x.id===card.dataset.id})[0];
+    var sz = e.target.closest(".size");
+    if(sz){ $$(".size",card).forEach(function(b){b.setAttribute("aria-pressed",String(b===sz))}); $(".price",card).textContent = money(p.sizes[+sz.dataset.i][1]); return; }
+    var add = e.target.closest(".add");
+    if(add){
+      var i = +$(".size[aria-pressed=true]",card).dataset.i;
+      addToCart(p,i);
+      add.classList.add("added"); add.innerHTML='<svg class="ico"><use href="#i-check"/></svg>Added';
+      setTimeout(function(){add.classList.remove("added"); add.innerHTML='<svg class="ico"><use href="#i-plus"/></svg>Add'},1200);
+    }
+  });
+  fetch("/data/menu.json").then(function(r){return r.json()}).then(function(m){
+    PRODUCTS = m.products; NOTES = m.notes; CATS = m.categories;
+    renderChips(); renderProducts();
+  }).catch(function(){
+    $("#products").innerHTML = '<div class="empty-cat"><h3>Menu is loading slowly</h3><p>Refresh the page, or order through DoorDash.</p></div>';
+  });
+
+  /* cart */
+  var cart = [];
+  try{ cart = JSON.parse(localStorage.getItem("pj-cart")||"[]") || [] }catch(e){ cart = [] }
+  function save(){ try{ localStorage.setItem("pj-cart",JSON.stringify(cart)) }catch(e){} }
+  function addToCart(p,i){
+    var key = p.id+"|"+i, line = cart.filter(function(l){return l.key===key})[0];
+    if(line) line.qty++; else cart.push({key:key,id:p.id,name:p.name,size:p.sizes[i][0],price:p.sizes[i][1],img:p.img,qty:1});
+    save(); renderCart(); toast(p.name+" ("+p.sizes[i][0]+") added to cart");
+  }
+  function renderCart(){
+    var n = cart.reduce(function(a,l){return a+l.qty},0), sub = cart.reduce(function(a,l){return a+l.qty*l.price},0);
+    var cc=$("#cart-count"); if(String(n)!==cc.textContent && n>0){cc.classList.remove("bump"); void cc.offsetWidth; cc.classList.add("bump");}
+    cc.textContent = n; cc.dataset.n = n; $("#cart-count-2").textContent = n;
+    $("#subtotal").textContent = money(sub);
+    $("#cart-items").innerHTML = cart.length ? cart.map(function(l){
+      return '<div class="line" data-key="'+l.key+'"><img src="'+l.img+'" alt=""><div><b>'+esc(l.name)+'</b><small>'+l.size+' · '+money(l.price)+'</small><div class="qty"><button type="button" data-d="-1" aria-label="Remove one">−</button><span>'+l.qty+'</span><button type="button" data-d="1" aria-label="Add one">+</button></div></div><span class="line-price">'+money(l.qty*l.price)+'</span></div>';
+    }).join("") : '<p class="cart-empty">Your cart is empty. Add a smoothie from the menu to get started.</p>';
+  }
+  $("#cart-items").addEventListener("click",function(e){
+    var b = e.target.closest("button[data-d]"); if(!b) return;
+    var key = b.closest(".line").dataset.key;
+    cart.forEach(function(l){ if(l.key===key) l.qty += +b.dataset.d });
+    cart = cart.filter(function(l){return l.qty>0}); save(); renderCart();
+  });
+  var drawer=$("#drawer"), scrim=$("#scrim");
+  function openCart(){drawer.classList.add("open");scrim.classList.add("open");drawer.setAttribute("aria-hidden","false");$("#cart-close").focus()}
+  function closeCart(){drawer.classList.remove("open");scrim.classList.remove("open");drawer.setAttribute("aria-hidden","true")}
+  $("#cart-open").addEventListener("click",openCart); $("#cart-open-2").addEventListener("click",openCart);
+  $("#cart-close").addEventListener("click",closeCart); scrim.addEventListener("click",closeCart);
+  document.addEventListener("keydown",function(e){if(e.key==="Escape")closeCart()});
+  $$("[data-quick-add]").forEach(function(b){b.addEventListener("click",function(){var p=PRODUCTS.filter(function(x){return x.id===b.dataset.quickAdd})[0]; addToCart(p,0)})});
+  renderCart();
+
+  var tt; function toast(m){var t=$("#toast"); t.textContent=m; t.classList.add("show"); clearTimeout(tt); tt=setTimeout(function(){t.classList.remove("show")},2000)}
+
+  /* prefill the free-call form from buttons */
+  $$("[data-goal],[data-plan]").forEach(function(a){a.addEventListener("click",function(){
+    if(a.dataset.goal){ $$('input[name=goal]').forEach(function(r){ r.checked = r.value===a.dataset.goal }) }
+    $("#plan-field").value = a.dataset.plan || "";
+    var chip=$("#plan-chip"); if(a.dataset.plan){chip.textContent="Interested in the "+a.dataset.plan+" plan";chip.hidden=false}else{chip.hidden=true}
+  })});
+
+  /* forms: posted as JSON to the site's own API (netlify/functions) */
+  function send(url,data){
+    return fetch(url,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)})
+      .then(function(r){ return r.json().catch(function(){return {}}).then(function(j){ if(!r.ok) throw new Error(j.error||"failed"); return j; }) });
+  }
+  var FALLBACK = "We couldn't send that just now. Please call us at (734) 444-2819 or try again.";
+  function wire(form,msg,okText){
+    form.addEventListener("submit",function(e){
+      e.preventDefault();
+      var btn = form.querySelector("[type=submit]"), label = btn.textContent;
+      btn.disabled = true; btn.textContent = "Sending…";
+      var data = Object.fromEntries(new FormData(form).entries());
+      send(form.getAttribute("action"),data)
+        .then(function(){ msg.textContent = okText; msg.classList.remove("err"); msg.hidden=false; form.reset(); })
+        .catch(function(err){ msg.textContent = err.message && err.message!=="failed" ? err.message : FALLBACK; msg.classList.add("err"); msg.hidden=false; })
+        .then(function(){ btn.disabled=false; btn.textContent=label; });
+    });
+  }
+
+  /* order ahead for pickup */
+  function pickupSlots(){
+    var sel = $("#pu-time"), out = [];
+    try{
+      var pr = new Intl.DateTimeFormat("en-US",{timeZone:TZ,weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());
+      var g = function(t){return (pr.filter(function(p){return p.type===t})[0]||{}).value};
+      var d = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday"));
+      var now = (parseInt(g("hour"),10)%24)*60 + parseInt(g("minute"),10), h = HOURS[d];
+      var open = h[0]*60, close = h[1]*60 - 15;
+      if(now < open-60 || now >= close) return 0; /* online ordering opens an hour before the shop */
+      if(now >= open) out.push(["ASAP","As soon as possible (about 15 min)"]);
+      var t = Math.max(open, Math.ceil((now+20)/15)*15);
+      for(; t<=close; t+=15){ var hh=Math.floor(t/60), mm=t%60; out.push([String(hh).padStart(2,"0")+":"+String(mm).padStart(2,"0"), (hh%12||12)+":"+String(mm).padStart(2,"0")+(hh>=12?" pm":" am")]); }
+    }catch(e){}
+    sel.innerHTML = out.map(function(o){return '<option value="'+o[0]+'">'+o[1]+'</option>'}).join("");
+    return out.length;
+  }
+  var pf = $("#pickup-form"), pmsg = $("#pickup-msg");
+  $("#pickup-open").addEventListener("click",function(){
+    pmsg.hidden = true;
+    if(!cart.length){ pmsg.textContent="Add something from the menu first."; pmsg.classList.add("err"); pmsg.hidden=false; return; }
+    if(!pickupSlots()){ pmsg.textContent="Online ordering is closed for today. Order on DoorDash or come by tomorrow."; pmsg.classList.add("err"); pmsg.hidden=false; return; }
+    pf.hidden = false; this.hidden = true; $("#pu-name").focus();
+  });
+  pf.addEventListener("submit",function(e){
+    e.preventDefault();
+    var btn = pf.querySelector("[type=submit]"), label = btn.textContent;
+    btn.disabled = true; btn.textContent = "Placing order…";
+    var data = Object.fromEntries(new FormData(pf).entries());
+    data.items = cart.map(function(l){return {id:l.id,size:l.size,qty:l.qty}});
+    send("/api/orders",data).then(function(j){
+      cart = []; save(); renderCart(); pf.reset(); pf.hidden = true; $("#pickup-open").hidden = false;
+      pmsg.textContent = "Order #"+j.orderNumber+" is in. Total "+money(j.total)+", paid at pickup. "+(j.pickup==="ASAP"?"See you in about 15 minutes.":"See you at "+j.pickupLabel+".");
+      pmsg.classList.remove("err"); pmsg.hidden = false;
+    }).catch(function(err){
+      pmsg.textContent = err.message && err.message!=="failed" ? err.message : FALLBACK; pmsg.classList.add("err"); pmsg.hidden = false;
+    }).then(function(){ btn.disabled=false; btn.textContent=label; });
+  });
+  wire($("#meal-form"),$("#meal-msg"),"You're in. Check your inbox for your 7-day meal plan.");
+
+  /* light motion */
+  (function(){
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if(reduce || !("IntersectionObserver" in window)) return;
+    document.documentElement.classList.add("js");
+    var els = $$(".prob-grid .card, .mission, .svc, .rev, .pkg, .book-grid > *, .extra, .pillar, .mural, .faq, .visit-grid > *, .paths .path");
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); io.unobserve(en.target); } });
+    },{rootMargin:"0px 0px -6% 0px"});
+    els.forEach(function(el,i){
+      var r = el.getBoundingClientRect();
+      if(r.top < window.innerHeight) return;
+      el.classList.add("reveal"); el.style.transitionDelay = ((i%3)*70)+"ms"; io.observe(el);
+    });
+    var hero = $(".hero"), img = $(".hero-media img");
+    if(hero && img && window.matchMedia("(hover:hover) and (min-width:1101px)").matches){
+      hero.addEventListener("mousemove",function(e){
+        var r = hero.getBoundingClientRect();
+        var x = (e.clientX - r.left)/r.width - .5, y = (e.clientY - r.top)/r.height - .5;
+        img.style.translate = (x*-14)+"px "+(y*-10)+"px";
+      });
+      hero.addEventListener("mouseleave",function(){ img.style.translate = "0 0"; });
+    }
+  })();
+  wire($("#call-form"),$("#call-msg"),"Got it. We'll reach out within one business day.");
+})();
+</script>
+
+</body>
+</html>
