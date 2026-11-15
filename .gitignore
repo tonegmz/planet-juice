@@ -1,7 +1,3 @@
-node_modules/
-.netlify/
-.env
-.env.*
-!.env.example
+# Local Netlify folder
+.netlify
 .DS_Store
-*.log
