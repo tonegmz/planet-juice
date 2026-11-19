@@ -20,11 +20,11 @@ Form detection is already enabled. For **each** form (`free-call` and `meal-plan
 ## 4. Please confirm (I made assumptions)
 1. **Annual plans.** I changed the three coaching plans (Starter $149, Elite $297, Champion $497) from "/month" to "/year" and the FAQ to "per year", keeping the dollar amounts. If the real annual prices differ, tell me. I did **not** change two other monthly prices because I need your annual numbers: **Online Coaching "From $199 / month"** and the **meal-plan Monthly toggle** (billed every four weeks, save $45). Tell me if those should become annual too, and at what price.
 2. **Açaí pricing.** I read ".75¢" on the menu board as $0.75 per extra topping, and wrote the build-your-own bowl as $9.99 with up to 4 free toppings. The signature bowls on the site still say "Price in store".
-3. **Menu board vs. the site's menu.** The board you sent differs from the cart menu in `index.html`:
-   - Açaí bowls: the board has a **Peanut Butter** bowl; the site has **Choco Banana**. (I matched the descriptions of Nutella, Planet Açaí and Very Berry to the board.)
-   - Power bowls show macros on the board (Chicken 510 cal/45g protein, Steak 610/36g, Falafel 650/20g).
-   - **Refreshers** (32oz, $7.99, 120mg caffeine: Blue Razz, Strawberry Melon, Cherry Pom, Strawberry Pom, Melon Cherry), **Detox shots** $3.99 (Daily Reset, Beauty, Citrus Fat-Burner, Golden Halo), **Pre-Workout** $3.49 (Levels 1 to 3) and **Planet Café** $7.99 (Frappuccino, Shaken Pluto, Matcha Latte, Matcha Muscle) differ from the site's item names and show "Price in store" there.
-   Tell me if the board is the source of truth and I'll update the site menu, `menu.html` and the prices to match it.
+3. **Menu now follows your board** (Refreshers, Café, Shots with board names, prices and ingredients; power-bowl macros; açaí bowls at $9.99; Peanut Butter bowl). Still to confirm or fix:
+   - **Photos:** the Peanut Butter bowl uses the old Choco Banana photo for now (`assets/bowl-peanut-butter.webp`). **Strawberry Pom reuses the Strawberry Melon photo** because I only have four refresher photos for five drinks. Send the missing photos (same file names, 1000px webp) when you have them.
+   - **Not on your board but still on the site:** the Kids drinks (Strawberry Slush, Chocoberry, "Price in store"), Planet Picks, and the Kafta and Shrimp bowls. Tell me which to keep or remove. Delete an item by removing it from `data/menu.json`.
+   - The shots' "Liver detox / Anti-inflammatory / Immunity boost" tags and the refreshers' "120mg caffeine, vitamins B, C, E" come straight from the board.
+   - Café "Matcha Muscle: Strawberry (Add: Protein)" and "Frappuccino: Protein/Caramel" are shown as "Strawberry · Add protein" and "Protein · Caramel". Reword in `data/menu.json` if needed.
 4. **Testimonials**: confirm they're real and you have permission, and that "500+ clients coached" is accurate. I changed "Ewah" to "Moses" inside two testimonial quotes; check that's what those clients said.
 5. **Service area** in the schema lists Southgate, Wyandotte, Taylor, Allen Park, Trenton. Remove any you don't serve.
 6. **Meal-plan page**: have Moses approve `free-meal-plan.html` (food choices and disclaimer). Source is in `scripts/build-pages.mjs`.

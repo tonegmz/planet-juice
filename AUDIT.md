@@ -11,8 +11,10 @@ Done on the code side since the first audit:
 - **`404.html`**, **`netlify.toml`** (publish root, security headers, asset caching, repo files hidden), **`assets/og-share.jpg`** (1200×630).
 - **Meal-plan to booking link**: each plan has "Or request a call about X", which opens the consultation form with the plan pre-selected (`index.html?plan=Build#book`).
 - **Cart**: stale saved carts are migrated, focus returns to the opener on close, Tab is trapped while the drawer is open.
-- **Guardrails**: `npm run check` verifies hours (JS, table, schema), prices, FAQ vs. schema, sitemap, canonical tags, alt text, missing files and phone/address consistency. `npm run build` regenerates `menu.html`, `free-meal-plan.html` and `404.html` from the shared header, footer and menu data. Run both before every push.
+- **Guardrails**: `npm run check` verifies hours (JS, table, schema), prices, FAQ vs. schema, sitemap, canonical tags, alt text, missing files and phone/address consistency. `npm run build` now regenerates the hours, menu data, schema and four pages from `data/*.json` (see README.md). Run both before every push.
 - **Still blocked / still needs a person**: see `OWNER-TODO.md`.
+
+Second build-out pass: menu, hours, contact details and schema now come from `data/site.json` and `data/menu.json` (one place each), Netlify runs build and check on every deploy, and `npm run check` also validates links and anchors, menu photos, and that nothing generated is stale. This closes the "hours in three places", "hard-coded menu" and "no hosting config" items below.
 
 ## 1. What the site shows vs. what is actually connected
 

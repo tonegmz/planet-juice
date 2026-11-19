@@ -1,0 +1,12 @@
+{
+  "_note": "Content of free-meal-plan.html (the page people see after signing up). Draft: have Moses review it. Edit here, then run npm run build.",
+  "days": [
+    ["Day 1", "Banana Bread smoothie (oats, banana)", "Chicken Bowl", "Fruit and a handful of nuts", "Steak Bowl, or grilled steak, potatoes and vegetables at home"],
+    ["Day 2", "Açaí bowl: Very Berry or Planet Açaí", "Falafel Bowl", "Plain yogurt with berries", "Chicken, rice and a big portion of vegetables"],
+    ["Day 3", "Protein smoothie: Planet Power or PB Lover", "Shrimp Bowl", "Apple with peanut butter", "Beef kafta bowl, or lean ground beef, rice and salad"],
+    ["Day 4", "Banana Bread smoothie plus a boiled egg or two", "Chicken Bowl", "Fruit smoothie (Triple Berry or Mango Mania)", "Falafel, hummus, salad and a small portion of rice"],
+    ["Day 5", "Protein smoothie: Blue Pineapple or Pina Colada", "Steak Bowl", "Carrots and hummus", "Grilled fish or shrimp with vegetables"],
+    ["Day 6", "Açaí bowl: Peanut Butter or Planet Açaí", "Beef kafta bowl", "Handful of nuts and a piece of fruit", "A meal you enjoy with a protein, a vegetable and a carb you like"],
+    ["Day 7", "Protein smoothie: Southgate Bliss", "Plan and prep: cook proteins and rice for next week", "Fruit and yogurt", "Chicken Bowl, or a simple home-cooked version"]
+  ]
+}

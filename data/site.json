@@ -1,0 +1,62 @@
+{
+  "name": "Planet Juice",
+  "url": "https://planetjuice.shop/",
+  "phone": {
+    "display": "(734) 444-2819",
+    "tel": "+17344442819"
+  },
+  "address": {
+    "street": "13615 Eureka Rd",
+    "city": "Southgate",
+    "region": "MI",
+    "zip": "48195",
+    "country": "US"
+  },
+  "geo": {
+    "latitude": 42.197908,
+    "longitude": -83.189034
+  },
+  "timezone": "America/Detroit",
+  "doordash": "https://www.doordash.com/store/planet-juice-southgate-30234389/39308575/",
+  "instagram": "https://www.instagram.com/planetjuiceee/",
+  "areaServed": [
+    "Southgate",
+    "Wyandotte",
+    "Taylor",
+    "Allen Park",
+    "Trenton"
+  ],
+  "hours": [
+    {
+      "label": "Monday to Friday",
+      "short": "Mon to Fri",
+      "days": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "open": 9,
+      "close": 22
+    },
+    {
+      "label": "Saturday",
+      "short": "Sat",
+      "days": [
+        6
+      ],
+      "open": 9,
+      "close": 21
+    },
+    {
+      "label": "Sunday",
+      "short": "Sun",
+      "days": [
+        0
+      ],
+      "open": 10,
+      "close": 19
+    }
+  ]
+}

@@ -1,0 +1,472 @@
+{
+  "categories": [
+    {
+      "name": "Smoothies",
+      "note": "Every smoothie is 16oz for $7.99 or 24oz for $8.99. Swap in almond or oat milk for $0.50. Want it as a juice? Just ask at the counter.",
+      "sizes": [
+        [
+          "16oz",
+          7.99
+        ],
+        [
+          "24oz",
+          8.99
+        ]
+      ],
+      "preWorkout": true,
+      "items": [
+        {
+          "id": "strawnana",
+          "name": "Strawnana",
+          "desc": "Strawberry · Banana"
+        },
+        {
+          "id": "planet-paradise",
+          "name": "Planet Paradise",
+          "desc": "Vanilla ice cream · Strawberry · Mango"
+        },
+        {
+          "id": "sunset-splash",
+          "name": "Sunset Splash",
+          "desc": "Mango · Strawberry"
+        },
+        {
+          "id": "heart-breaker",
+          "name": "Heart Breaker",
+          "desc": "Vanilla ice cream · Strawberry · Mango"
+        },
+        {
+          "id": "triple-berry",
+          "name": "Triple Berry",
+          "desc": "Blueberry · Raspberry · Strawberry · Banana"
+        },
+        {
+          "id": "pom-berry-bliss",
+          "name": "Pom Berry Bliss",
+          "desc": "Mango · Pomegranate · Strawberry · Banana"
+        },
+        {
+          "id": "razzle-dazzle",
+          "name": "Razzle Dazzle",
+          "desc": "Raspberries · Mango · Coconut milk · Pineapple"
+        },
+        {
+          "id": "mango-mania",
+          "name": "Mango Mania",
+          "desc": "Pure mango"
+        },
+        {
+          "id": "pb-berry",
+          "name": "PB Berry",
+          "desc": "Peanut butter · Strawberry · Blueberry"
+        },
+        {
+          "id": "banana-bread",
+          "name": "Banana Bread",
+          "desc": "Oats · Banana"
+        },
+        {
+          "id": "green-galaxy",
+          "name": "Green Galaxy",
+          "desc": "Apple · Cucumber · Celery · Ginger"
+        },
+        {
+          "id": "avocado-dew",
+          "name": "Avocado Dew",
+          "desc": "Avocado · Banana · Honey"
+        }
+      ]
+    },
+    {
+      "name": "Protein",
+      "note": "Every protein smoothie is 16oz for $8.99 or 24oz for $9.99, with about 400 calories. Swap in almond, oat or coconut milk for $0.50. Choose your protein in store.",
+      "sizes": [
+        [
+          "16oz",
+          8.99
+        ],
+        [
+          "24oz",
+          9.99
+        ]
+      ],
+      "preWorkout": true,
+      "items": [
+        {
+          "id": "pro-southgate-bliss",
+          "name": "Southgate Bliss",
+          "desc": "Blueberry · Banana · Oats · Granola · Peanut butter · Milk",
+          "stats": "400 cal · 40g protein"
+        },
+        {
+          "id": "pro-planet-power",
+          "name": "Planet Power",
+          "desc": "Peanut butter · Banana",
+          "stats": "400 cal · 40g protein"
+        },
+        {
+          "id": "pro-straw-burst",
+          "name": "Straw Burst",
+          "desc": "Peanut butter · Strawberry · Banana",
+          "stats": "400 cal · 40g protein"
+        },
+        {
+          "id": "pro-pb-lover",
+          "name": "PB Lover",
+          "desc": "Peanut butter · Strawberry · Blueberry",
+          "stats": "400 cal · 40g protein"
+        },
+        {
+          "id": "pro-blue-pineapple",
+          "name": "Blue Pineapple",
+          "desc": "Pineapple · Blueberry",
+          "stats": "400 cal · 40g protein"
+        },
+        {
+          "id": "pro-pina-colada",
+          "name": "Piña Colada",
+          "desc": "Banana · Pineapple · Spinach",
+          "stats": "400 cal · 40g protein"
+        },
+        {
+          "id": "pro-mango-muscle",
+          "name": "Mango Muscle",
+          "desc": "Mango · Yogurt",
+          "stats": "400 cal · 47g protein"
+        },
+        {
+          "id": "pro-jamaican",
+          "name": "Jamaican",
+          "desc": "Banana · Mango · Pineapple · Spinach",
+          "stats": "400 cal · 40g protein"
+        },
+        {
+          "id": "pro-dubai-choco-power",
+          "name": "Dubai Choco Power",
+          "desc": "Raspberry · Pistachio · Blueberry · Banana",
+          "stats": "400 cal · 40g protein"
+        },
+        {
+          "id": "pro-banana-fudge",
+          "name": "Banana Fudge",
+          "desc": "Banana · Peanut butter · Chocolate",
+          "stats": "400 cal · 40g protein"
+        }
+      ]
+    },
+    {
+      "name": "Planet Picks",
+      "note": "Every Planet Pick is 16oz for $7.99 or 24oz for $8.99. Swap in almond or oat milk for $0.50.",
+      "sizes": [
+        [
+          "16oz",
+          7.99
+        ],
+        [
+          "24oz",
+          8.99
+        ]
+      ],
+      "items": [
+        {
+          "id": "pick-planet-caramel",
+          "name": "Planet Caramel",
+          "desc": "Caramel · Banana"
+        },
+        {
+          "id": "pick-meteor-shower",
+          "name": "Meteor Shower",
+          "desc": "Cookies & cream"
+        },
+        {
+          "id": "pick-mango-pom",
+          "name": "Mango Pom",
+          "desc": "Mango · Pomegranate"
+        },
+        {
+          "id": "pick-paradise-juice",
+          "name": "Paradise Juice Blend",
+          "desc": "Pineapple · Mango"
+        }
+      ]
+    },
+    {
+      "name": "Kids",
+      "note": "Kids' smoothies. Prices are in store and on DoorDash.",
+      "items": [
+        {
+          "id": "kids-strawberry-slush",
+          "name": "Strawberry Slush",
+          "desc": "Strawberry"
+        },
+        {
+          "id": "kids-chocoberry",
+          "name": "Chocoberry",
+          "desc": "Chocolate · Raspberry · Blueberry"
+        }
+      ]
+    },
+    {
+      "name": "Açaí Bowls",
+      "note": "Every açaí bowl is $9.99, whether you build your own or pick a signature bowl. On a build-your-own bowl, up to 4 toppings are free and extra toppings are $0.75 each.",
+      "sizes": [
+        [
+          "Regular",
+          9.99
+        ]
+      ],
+      "items": [
+        {
+          "id": "bowl-very-berry",
+          "name": "Very Berry",
+          "desc": "Strawberry · Blueberry · Granola · Honey"
+        },
+        {
+          "id": "bowl-planet-acai",
+          "name": "Planet Açaí",
+          "desc": "Strawberry · Banana · Granola · Honey"
+        },
+        {
+          "id": "bowl-nutella",
+          "name": "Nutella Bowl",
+          "desc": "Strawberry · Banana · Nutella · Granola"
+        },
+        {
+          "id": "bowl-peanut-butter",
+          "name": "Peanut Butter",
+          "desc": "Banana · Blueberry · Granola · Honey"
+        }
+      ]
+    },
+    {
+      "name": "Power Bowls",
+      "note": "Every power bowl is $9.99. Ask about a custom meal prep plan.",
+      "sizes": [
+        [
+          "Regular",
+          9.99
+        ]
+      ],
+      "items": [
+        {
+          "id": "bowl-chicken",
+          "name": "Chicken Bowl",
+          "desc": "Chicken · Yellow rice · Vegetables",
+          "stats": "510 cal · 45g protein · 52g carbs · 11g fat"
+        },
+        {
+          "id": "bowl-steak",
+          "name": "Steak Bowl",
+          "desc": "Steak · Yellow rice · Vegetables",
+          "stats": "610 cal · 36g protein · 46g carbs · 20g fat"
+        },
+        {
+          "id": "bowl-falafel",
+          "name": "Falafel Bowl",
+          "desc": "Vegetarian falafel · Yellow rice · Vegetables",
+          "stats": "650 cal · 20g protein · 68g carbs · 18g fat"
+        },
+        {
+          "id": "bowl-kafta",
+          "name": "Kafta Bowl",
+          "desc": "Beef kafta · Rice · Vegetables"
+        },
+        {
+          "id": "bowl-shrimp",
+          "name": "Shrimp Bowl",
+          "desc": "Shrimp skewers · Rice · Vegetables"
+        }
+      ]
+    },
+    {
+      "name": "Refreshers",
+      "note": "Every caffeinated refresher is 32oz for $7.99. Includes 120mg of caffeine and vitamins B, C and E.",
+      "sizes": [
+        [
+          "32oz",
+          7.99
+        ]
+      ],
+      "preWorkout": true,
+      "items": [
+        {
+          "id": "refresher-blue-razz",
+          "name": "Blue Razz",
+          "desc": "Caffeinated refresher",
+          "stats": "120mg caffeine · Vitamins B, C, E"
+        },
+        {
+          "id": "refresher-strawberry-melon",
+          "name": "Strawberry Melon",
+          "desc": "Caffeinated refresher",
+          "stats": "120mg caffeine · Vitamins B, C, E"
+        },
+        {
+          "id": "refresher-cherry-pom",
+          "name": "Cherry Pom",
+          "desc": "Caffeinated refresher",
+          "stats": "120mg caffeine · Vitamins B, C, E"
+        },
+        {
+          "id": "refresher-strawberry-pom",
+          "name": "Strawberry Pom",
+          "desc": "Caffeinated refresher",
+          "stats": "120mg caffeine · Vitamins B, C, E",
+          "img": "refresher-strawberry-melon"
+        },
+        {
+          "id": "refresher-melon-cherry",
+          "name": "Melon Cherry",
+          "desc": "Caffeinated refresher",
+          "stats": "120mg caffeine · Vitamins B, C, E"
+        }
+      ]
+    },
+    {
+      "name": "Café",
+      "note": "Every Planet Café drink is $7.99.",
+      "sizes": [
+        [
+          "Regular",
+          7.99
+        ]
+      ],
+      "items": [
+        {
+          "id": "cafe-frappuccino",
+          "name": "Frappuccino",
+          "desc": "Protein · Caramel"
+        },
+        {
+          "id": "cafe-shaken-pluto",
+          "name": "Shaken Pluto",
+          "desc": "Brown sugar"
+        },
+        {
+          "id": "cafe-matcha-latte",
+          "name": "Matcha Latte",
+          "desc": "Strawberry"
+        },
+        {
+          "id": "cafe-matcha-muscle",
+          "name": "Matcha Muscle",
+          "desc": "Strawberry · Add protein"
+        }
+      ]
+    },
+    {
+      "name": "Shots",
+      "note": "Every detox shot is $3.99.",
+      "sizes": [
+        [
+          "Shot",
+          3.99
+        ]
+      ],
+      "preWorkout": true,
+      "items": [
+        {
+          "id": "shot-daily-reset",
+          "name": "Daily Reset Shot",
+          "desc": "Apple cider vinegar · Ginger · Lemon · Salt · Honey",
+          "stats": "Liver detox"
+        },
+        {
+          "id": "shot-beauty",
+          "name": "Beauty Shot",
+          "desc": "Green apple · Spinach · Lemon · Ginger · Cucumber",
+          "stats": "Anti-inflammatory"
+        },
+        {
+          "id": "shot-citrus-fat-burner",
+          "name": "Citrus Fat-Burner",
+          "desc": "Pineapple · Beet · Ginger · Turmeric · Peppers",
+          "stats": "Anti-inflammatory"
+        },
+        {
+          "id": "shot-golden-halo",
+          "name": "Golden Halo",
+          "desc": "Vitamin C · Ginger · Lemon · Mint · Honey",
+          "stats": "Immunity boost"
+        }
+      ]
+    }
+  ],
+  "allNote": "Smoothies and Planet Picks are $7.99 (16oz) or $8.99 (24oz). Protein smoothies are $8.99 (16oz) or $9.99 (24oz). Açaí and power bowls are $9.99. Milk swaps are $0.50.",
+  "byo": {
+    "price": 9.99,
+    "freeToppings": 4,
+    "extraTopping": 0.75,
+    "bases": [
+      {
+        "name": "Organic Açaí",
+        "img": "base-acai"
+      },
+      {
+        "name": "Dragonfruit",
+        "img": "base-pitaya"
+      },
+      {
+        "name": "Ube",
+        "img": "base-ube"
+      },
+      {
+        "name": "Blue Spirulina",
+        "img": "base-spirulina"
+      },
+      {
+        "name": "Mango",
+        "img": "base-mango"
+      },
+      {
+        "name": "Coconut",
+        "img": "base-coconut"
+      }
+    ],
+    "toppings": {
+      "Fruits": [
+        "Blueberries",
+        "Bananas",
+        "Strawberries",
+        "Kiwi"
+      ],
+      "Power": [
+        "Peanut butter",
+        "Granola",
+        "Chia seeds",
+        "Greek yogurt"
+      ],
+      "Extras": [
+        "Nutella",
+        "Honey",
+        "Coco flakes"
+      ]
+    }
+  },
+  "addons": {
+    "nutrition": {
+      "name": "Nutrition Add-Ons",
+      "price": 1.99,
+      "text": "Boost any drink with Fat Burner, Caffeine, Recovery, Immune, Vitamin C, Collagen, Creatine, Pump or Omega-3. Protein options in store."
+    },
+    "preWorkout": {
+      "name": "Pre-Workout",
+      "price": 3.49,
+      "text": "Three strength levels. Ask at the counter which one fits your training.",
+      "levels": [
+        {
+          "name": "Level 1 · Focus",
+          "img": "pre-level1"
+        },
+        {
+          "name": "Level 2 · Intense",
+          "img": "pre-level2"
+        },
+        {
+          "name": "Level 3 · Extreme",
+          "img": "pre-level3"
+        }
+      ]
+    }
+  }
+}

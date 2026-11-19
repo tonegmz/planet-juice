@@ -2,6 +2,11 @@
 # If your Netlify project was set to publish "public", this file overrides it.
 [build]
   publish = "."
+  # Regenerates pages from data/*.json and fails the deploy (old site stays live) if anything is out of sync.
+  command = "node scripts/build.mjs && node scripts/check.mjs"
+
+[build.environment]
+  NODE_VERSION = "22"
 
 [[headers]]
   for = "/*"
@@ -42,6 +47,18 @@
 
 [[redirects]]
   from = "/scripts/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/README.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/data/*"
   to = "/404.html"
   status = 404
   force = true

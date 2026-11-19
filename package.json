@@ -5,7 +5,7 @@
   "description": "Planet Juice static site",
   "scripts": {
     "start": "python3 -m http.server 3000",
-    "build": "node scripts/build-pages.mjs",
+    "build": "node scripts/build.mjs",
     "check": "node scripts/check.mjs"
   }
 }
