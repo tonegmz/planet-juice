@@ -10,7 +10,7 @@
 // `node scripts/build.mjs --check` writes nothing and fails if the files on disk are out of date.
 import { writeFileSync } from "node:fs";
 import {
-  read, json, esc, money, slug, site, menu, BASE, PRODUCTS, CATS, NOTES, PRE_CATS,
+  read, json, esc, money, slug, site, menu, BASE, PRODUCTS, CATS, NOTES, PRE_CATS, ALIASES,
   hoursJs, hoursTableRows, hoursSentence, footerHours, hoursSpec, imageSize,
 } from "./lib.mjs";
 
@@ -59,6 +59,7 @@ ${PRODUCTS.map((p) => "    " + jsonSafe(p)).join(",\n")}
   ];
   var NOTES = ${jsonSafe(NOTES, 2).replace(/\n/g, "\n  ")};
   var CATS = ${jsonSafe(CATS)};
+  var ALIASES = ${jsonSafe(ALIASES)};
   var BYO = ${jsonSafe({ price: byo.price, free: byo.freeToppings, extra: byo.extraTopping, bases: byo.bases.map(byoBase) })};`;
 
 const extrasHtml = (() => {

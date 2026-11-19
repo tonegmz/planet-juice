@@ -24,6 +24,8 @@ export const PRODUCTS = menu.categories.flatMap((c) =>
     sizes: i.sizes || c.sizes || null,
   })),
 );
+/** Old ids -> current id, so carts saved before a rename still work. */
+export const ALIASES = Object.fromEntries(menu.categories.flatMap((c) => c.items.flatMap((i) => (i.aliases || []).map((a) => [a, i.id]))));
 export const CATS = ["All", ...menu.categories.map((c) => c.name)];
 export const NOTES = { ...Object.fromEntries(menu.categories.filter((c) => c.note).map((c) => [c.name, c.note])), All: menu.allNote };
 export const PRE_CATS = menu.categories.filter((c) => c.preWorkout).map((c) => c.name);

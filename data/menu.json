@@ -79,7 +79,7 @@
     },
     {
       "name": "Protein",
-      "note": "Every protein smoothie is 16oz for $8.99 or 24oz for $9.99, with about 400 calories. Swap in almond, oat or coconut milk for $0.50. Choose your protein in store.",
+      "note": "Every protein smoothie is 16oz for $8.99 or 24oz for $9.99, with about 400 calories and 40g of protein (47g in Mango Muscle and Berry Bulk). Swap in almond, oat or coconut milk for $0.50. Choose your protein in store.",
       "sizes": [
         [
           "16oz",
@@ -93,63 +93,90 @@
       "preWorkout": true,
       "items": [
         {
-          "id": "pro-southgate-bliss",
-          "name": "Southgate Bliss",
-          "desc": "Blueberry · Banana · Oats · Granola · Peanut butter · Milk",
-          "stats": "400 cal · 40g protein"
+          "id": "pro-southgate",
+          "name": "Southgate",
+          "desc": "Oats · Granola · Peanut butter · Milk",
+          "stats": "400 cal · 40g protein",
+          "aliases": [
+            "pro-southgate-bliss"
+          ]
         },
         {
           "id": "pro-planet-power",
           "name": "Planet Power",
-          "desc": "Peanut butter · Banana",
+          "desc": "Almond milk · Vanilla protein",
           "stats": "400 cal · 40g protein"
         },
         {
-          "id": "pro-straw-burst",
-          "name": "Straw Burst",
-          "desc": "Peanut butter · Strawberry · Banana",
-          "stats": "400 cal · 40g protein"
+          "id": "pro-strawburst",
+          "name": "Strawburst",
+          "desc": "Milk · Vanilla protein",
+          "stats": "400 cal · 40g protein",
+          "aliases": [
+            "pro-straw-burst"
+          ]
         },
         {
           "id": "pro-pb-lover",
           "name": "PB Lover",
-          "desc": "Peanut butter · Strawberry · Blueberry",
+          "desc": "Berries · Milk · Chocolate protein",
           "stats": "400 cal · 40g protein"
         },
         {
-          "id": "pro-blue-pineapple",
-          "name": "Blue Pineapple",
-          "desc": "Pineapple · Blueberry",
-          "stats": "400 cal · 40g protein"
+          "id": "pro-pineberry",
+          "name": "Pineberry",
+          "desc": "Banana · Pineapple · Vanilla protein",
+          "stats": "400 cal · 40g protein",
+          "aliases": [
+            "pro-blue-pineapple"
+          ]
+        },
+        {
+          "id": "pro-jamaica",
+          "name": "Jamaica",
+          "desc": "Almond milk · Honey · Vimto · Vanilla protein",
+          "stats": "400 cal · 40g protein",
+          "aliases": [
+            "pro-jamaican"
+          ]
         },
         {
           "id": "pro-pina-colada",
-          "name": "Piña Colada",
-          "desc": "Banana · Pineapple · Spinach",
+          "name": "Pina Colada",
+          "desc": "Coconut flakes · Vanilla protein",
           "stats": "400 cal · 40g protein"
         },
         {
           "id": "pro-mango-muscle",
           "name": "Mango Muscle",
-          "desc": "Mango · Yogurt",
+          "desc": "Milk · Vanilla protein",
           "stats": "400 cal · 47g protein"
         },
         {
-          "id": "pro-jamaican",
-          "name": "Jamaican",
-          "desc": "Banana · Mango · Pineapple · Spinach",
-          "stats": "400 cal · 40g protein"
+          "id": "pro-vegan",
+          "name": "Vegan",
+          "desc": "Honey · Vegan protein powder",
+          "stats": "400 cal · 40g protein · Vegan"
         },
         {
-          "id": "pro-dubai-choco-power",
-          "name": "Dubai Choco Power",
-          "desc": "Raspberry · Pistachio · Blueberry · Banana",
-          "stats": "400 cal · 40g protein"
+          "id": "pro-berry-bulk",
+          "name": "Berry Bulk",
+          "desc": "Banana · Milk · Vanilla protein",
+          "stats": "400 cal · 47g protein"
+        },
+        {
+          "id": "pro-dubai-choco",
+          "name": "Dubai Choco",
+          "desc": "Dubai pistachio powder · Chocolate protein",
+          "stats": "400 cal · 40g protein",
+          "aliases": [
+            "pro-dubai-choco-power"
+          ]
         },
         {
           "id": "pro-banana-fudge",
           "name": "Banana Fudge",
-          "desc": "Banana · Peanut butter · Chocolate",
+          "desc": "Chocolate protein · Peanut butter",
           "stats": "400 cal · 40g protein"
         }
       ]
@@ -192,7 +219,7 @@
     },
     {
       "name": "Kids",
-      "note": "Kids' smoothies. Prices are in store and on DoorDash.",
+      "note": "Every kids' drink is $7.99.",
       "items": [
         {
           "id": "kids-strawberry-slush",
@@ -204,6 +231,12 @@
           "name": "Chocoberry",
           "desc": "Chocolate · Raspberry · Blueberry"
         }
+      ],
+      "sizes": [
+        [
+          "Regular",
+          7.99
+        ]
       ]
     },
     {
@@ -269,12 +302,18 @@
         {
           "id": "bowl-kafta",
           "name": "Kafta Bowl",
-          "desc": "Beef kafta · Rice · Vegetables"
+          "desc": "Beef kafta · Rice · Vegetables",
+          "aliases": [
+            "power-kafta"
+          ]
         },
         {
           "id": "bowl-shrimp",
           "name": "Shrimp Bowl",
-          "desc": "Shrimp skewers · Rice · Vegetables"
+          "desc": "Shrimp skewers · Rice · Vegetables",
+          "aliases": [
+            "power-shrimp"
+          ]
         }
       ]
     },
@@ -311,8 +350,7 @@
           "id": "refresher-strawberry-pom",
           "name": "Strawberry Pom",
           "desc": "Caffeinated refresher",
-          "stats": "120mg caffeine · Vitamins B, C, E",
-          "img": "refresher-strawberry-melon"
+          "stats": "120mg caffeine · Vitamins B, C, E"
         },
         {
           "id": "refresher-melon-cherry",
