@@ -1,0 +1,11 @@
+{
+  "name": "planet-juice",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Planet Juice static site",
+  "scripts": {
+    "start": "python3 -m http.server 3000",
+    "build": "node scripts/build-pages.mjs",
+    "check": "node scripts/check.mjs"
+  }
+}
