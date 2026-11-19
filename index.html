@@ -275,15 +275,22 @@ h3{font:800 18px/1.25 var(--display);font-stretch:105%;letter-spacing:-.01em;mar
 .prod-sec-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;margin:0 0 14px}
 .prod-sec-head h3{font:900 clamp(22px,2.6vw,28px)/1.1 var(--display);font-stretch:108%;letter-spacing:-.02em;margin:0}
 .prod-sec-head p{margin:0;color:var(--muted);font-size:13.5px;flex:1 1 280px}
-.prod-byo{grid-column:span 2;background:var(--purple);color:var(--white)}
-.byo-body{display:flex;flex-direction:column;flex:1;padding:16px 14px 14px}
-.byo-body .cat-badge{position:static;align-self:flex-start;margin-bottom:10px}
-.prod-byo h3{font-size:20px;color:var(--white)}
-.prod-byo p{margin:6px 0 14px;color:rgba(255,255,255,.92);font-size:13px;line-height:1.45}
-.byo-bases{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;margin:auto 0 0}
-.byo-bases span{background:var(--white);border-radius:10px;aspect-ratio:1;display:grid;place-items:center;padding:5px}
+.prod-byo{grid-column:1/-1;background:var(--purple);color:var(--white)}
+.byo-body{display:flex;flex-direction:column;gap:16px;flex:1;padding:18px 16px}
+.byo-copy .cat-badge{position:static;display:inline-block;margin-bottom:10px}
+.prod-byo h3{font-size:22px;color:var(--white)}
+.prod-byo p{margin:6px 0 0;color:rgba(255,255,255,.92);font-size:13.5px;line-height:1.45}
+.byo-bases{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
+.byo-bases span{background:var(--white);border-radius:12px;aspect-ratio:1;display:grid;place-items:center;padding:6px}
 .byo-bases img{width:100%;height:100%;object-fit:contain}
-.prod-byo .prod-foot b{color:var(--white)}
+.prod-byo .prod-foot{margin:0}
+.prod-byo .prod-foot b{color:var(--white);font-size:22px}
+@media (min-width:761px){
+  .byo-body{flex-direction:row;align-items:center;gap:28px;padding:22px 24px}
+  .byo-copy{flex:1 1 240px}
+  .byo-bases{flex:0 0 auto;grid-template-columns:repeat(6,76px)}
+  .prod-byo .prod-foot{flex-direction:column;align-items:flex-end;gap:10px}
+}
 .empty-cat{grid-column:1/-1;background:var(--white);border-radius:14px;padding:36px 24px;text-align:center}
 .empty-cat h3{font-size:20px}
 .empty-cat p{color:var(--muted);margin:8px auto 18px;max-width:46ch;font-size:14.5px}
@@ -989,7 +996,7 @@ h3{font:800 18px/1.25 var(--display);font-stretch:105%;letter-spacing:-.01em;mar
     $("#chips").innerHTML = CATS.map(function(c){return '<button class="chip" type="button" aria-pressed="'+(c===current)+'" data-cat="'+esc(c)+'">'+esc(c)+'</button>'}).join("");
   }
   function byoCard(){
-    return '<article class="prod prod-info prod-byo"><div class="byo-body"><span class="cat-badge">Açaí Bowls</span><h3>Build Your Own Açaí Bowl</h3><p>Pick a base and up to '+BYO.free+' free toppings. Extra toppings are '+money(BYO.extra)+' each.</p><div class="byo-bases">'+
+    return '<article class="prod prod-info prod-byo"><div class="byo-body"><div class="byo-copy"><span class="cat-badge">Açaí Bowls</span><h3>Build Your Own Açaí Bowl</h3><p>Pick a base and up to '+BYO.free+' free toppings. Extra toppings are '+money(BYO.extra)+' each.</p></div><div class="byo-bases">'+
       BYO.bases.map(function(src){return '<span><img src="'+src+'" alt="" loading="lazy"></span>'}).join("")+
       '</div><div class="prod-foot"><b class="price">'+money(BYO.price)+'</b><a class="btn btn-white" href="build-your-own-acai-bowl.html#build">Build yours →</a></div></div></article>';
   }
@@ -1001,7 +1008,7 @@ h3{font:800 18px/1.25 var(--display);font-stretch:105%;letter-spacing:-.01em;mar
       '</div><div class="prod-foot"><b class="price">'+money(p.sizes[0][1])+'</b><button class="btn btn-purple add" type="button"><svg class="ico"><use href="#i-plus"/></svg>Add</button></div></div></article>';
   }
   function cards(cat){
-    return (cat==="Açaí Bowls"?byoCard():"")+PRODUCTS.filter(function(p){return p.cat===cat}).map(card).join("");
+    return PRODUCTS.filter(function(p){return p.cat===cat}).map(card).join("")+(cat==="Açaí Bowls"?byoCard():"");
   }
   function renderProducts(){
     var box = $("#products");
