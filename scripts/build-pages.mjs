@@ -183,6 +183,100 @@ page({
   css: freeCss, main: freeMain,
 });
 
+/* ================= build-your-own-acai-bowl.html ================= */
+const BYO_PRICE = 9.99, BYO_FREE = 4, BYO_EXTRA = 0.75;
+const bases = [
+  ["Organic Açaí", "assets/base-acai.webp"], ["Dragonfruit", "assets/base-pitaya.webp"],
+  ["Ube", "assets/base-ube.webp"], ["Blue Spirulina", "assets/base-spirulina.webp"],
+  ["Mango", null, "#F6A623"], ["Coconut", null, "#EFE8DA"],
+];
+const toppings = {
+  Fruits: ["Blueberries", "Bananas", "Strawberries", "Kiwi"],
+  Power: ["Peanut butter", "Granola", "Chia seeds", "Greek yogurt"],
+  Extras: ["Nutella", "Honey", "Coco flakes"],
+};
+const signature = [
+  ["Nutella Bowl", "Strawberry · Banana · Nutella · Granola", "assets/bowl-nutella.webp"],
+  ["Planet Açaí", "Strawberry · Banana · Granola · Honey", "assets/bowl-planet-acai.webp"],
+  ["Very Berry", "Strawberry · Blueberry · Granola · Honey", "assets/bowl-very-berry.webp"],
+  ["Peanut Butter", "Banana · Blueberry · Granola · Honey", null],
+];
+const baseHtml = bases.map(([n, img, color], i) => {
+  const pic = img ? `<img src="${img}" alt="" width="${dims(img).w}" height="${dims(img).h}" loading="lazy">` : `<span class="swatch" style="background:${color}" aria-hidden="true"></span>`;
+  return `<label class="opt base"><input type="radio" name="base" value="${esc(n)}"${i === 0 ? " checked" : ""}>${pic}<span>${esc(n)}</span></label>`;
+}).join("");
+const topHtml = Object.entries(toppings).map(([g, list]) => `<fieldset class="tgroup"><legend>${g}</legend>${list.map((t) => `<label class="opt top"><input type="checkbox" name="topping" value="${esc(t)}"><span>${esc(t)}</span></label>`).join("")}</fieldset>`).join("");
+const sigHtml = signature.map(([n, d, img]) => `<article class="menu-item">${img ? `<img src="${img}" alt="${esc(n)} açaí bowl" width="${dims(img).w}" height="${dims(img).h}" loading="lazy">` : `<span class="swatch ph" aria-hidden="true"></span>`}<div><h3>${esc(n)}</h3><p>${esc(d)}</p></div></article>`).join("");
+const byoCss = `
+.byo-hero{padding-block:clamp(48px,7vw,88px)}
+.byo-step{margin-top:36px}
+.byo-step h2{display:flex;align-items:center;gap:12px;font:800 clamp(22px,3vw,30px)/1.1 var(--display);margin:0 0 6px}
+.byo-step h2 b{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--purple);color:#fff;font-size:18px}
+.byo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px;margin-top:16px}
+.opt{position:relative;cursor:pointer}
+.opt input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.opt.base{display:flex;flex-direction:column;align-items:center;gap:8px;padding:12px;border:1.5px solid var(--line);border-radius:14px;background:var(--white);font:600 14px/1.2 var(--body);text-align:center}
+.opt.base img,.swatch{width:72px;height:72px;border-radius:50%;object-fit:cover;display:block}
+.swatch{border:1px solid var(--line)}.swatch.ph{width:92px;height:92px;border-radius:10px;background:var(--lav-soft);flex:none}
+.opt.base:has(input:checked),.opt.top:has(input:checked){border-color:var(--purple);background:var(--lav-soft);box-shadow:0 0 0 2px var(--purple) inset}
+.opt:has(input:focus-visible){outline:2px solid var(--lav);outline-offset:3px}
+.tgroups{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:16px}
+.tgroup{border:1px solid var(--line);border-radius:14px;padding:14px;margin:0;display:grid;gap:8px;align-content:start}
+.tgroup legend{font:800 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--purple);padding:0 6px}
+.opt.top{display:block;padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;font:600 14px/1.2 var(--body);background:var(--white)}
+.byo-sum{position:sticky;bottom:12px;margin-top:28px;padding:18px;border-radius:16px;background:var(--ink);color:#fff;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;z-index:5}
+.byo-sum p{margin:0}.byo-sum .tot{font:800 26px/1 var(--display)}.byo-sum small{opacity:.75;display:block;margin-top:4px}
+.byo-sum .btns{display:flex;flex-wrap:wrap;gap:10px}
+.menu-item{display:flex;gap:14px;align-items:flex-start;padding:14px;border:1px solid var(--line);border-radius:14px;background:var(--white)}
+.menu-item img{width:92px;height:92px;object-fit:cover;border-radius:10px;flex:none;background:var(--mist)}
+.menu-item h3{margin:0 0 4px;font:700 17px/1.2 var(--body)}.menu-item p{margin:0;color:var(--muted);font-size:14px}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-top:16px}`;
+const byoJs = `<script>
+(function(){
+  var P=${BYO_PRICE},FREE=${BYO_FREE},EX=${BYO_EXTRA};
+  var sum=document.getElementById("sum"),tot=document.getElementById("tot"),note=document.getElementById("note"),copy=document.getElementById("copy"),msg=document.getElementById("copymsg");
+  function state(){
+    var b=document.querySelector("input[name=base]:checked"), t=[].slice.call(document.querySelectorAll("input[name=topping]:checked")).map(function(x){return x.value});
+    var extra=Math.max(0,t.length-FREE), price=P+extra*EX;
+    tot.textContent="$"+price.toFixed(2);
+    note.textContent=(b?b.value:"Pick a base")+" · "+t.length+" topping"+(t.length===1?"":"s")+(t.length<=FREE?" ("+(FREE-t.length)+" free left)":" ("+extra+" extra at $"+EX.toFixed(2)+")");
+    return {base:b?b.value:"",toppings:t,price:price};
+  }
+  document.addEventListener("change",state); state();
+  copy.addEventListener("click",function(){
+    var s=state(), text="Build-your-own açaí bowl: "+s.base+" base"+(s.toppings.length?" with "+s.toppings.join(", "):"")+" ("+tot.textContent+")";
+    function done(m){msg.textContent=m}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){done("Copied. Paste it into the DoorDash notes or read it to us on the phone.")},function(){done(text)})}else{done(text)}
+  });
+})();
+</script>`;
+const byoMain = `<section class="section byo-hero mist"><div class="wrap">
+<p class="eyebrow">Açaí bar · Southgate, MI</p>
+<h1 class="h-display">Build your own açaí bowl</h1>
+<p class="lead">Pick a base, pile on up to ${BYO_FREE} toppings free, and it's $${BYO_PRICE} at the counter on Eureka Road. Extra toppings are $${BYO_EXTRA.toFixed(2)} each.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:22px">
+<a class="btn btn-purple btn-lg" href="${DD}" target="_blank" rel="noopener">Order on DoorDash</a>
+<a class="btn btn-line btn-lg" href="tel:+17344442819">Call (734) 444-2819</a>
+<a class="btn btn-line btn-lg" href="menu.html">See the full menu</a></div>
+</div></section>
+<section class="section"><div class="wrap">
+<div class="byo-step"><h2><b>1</b>Choose a base</h2><p class="lead" style="margin-top:0">Pick one.</p><div class="byo-grid" role="radiogroup" aria-label="Base">${baseHtml}</div></div>
+<div class="byo-step"><h2><b>2</b>Choose your toppings</h2><p class="lead" style="margin-top:0">Up to ${BYO_FREE} free toppings. Extra toppings $${BYO_EXTRA.toFixed(2)} each.</p><div class="tgroups">${topHtml}</div></div>
+<div class="byo-sum" id="sum"><div><p class="tot" id="tot">$${BYO_PRICE.toFixed(2)}</p><small id="note"></small></div>
+<div class="btns"><button class="btn btn-white" type="button" id="copy">Copy my bowl</button><a class="btn btn-purple" href="${DD}" target="_blank" rel="noopener">Order on DoorDash</a></div></div>
+<p class="lead" style="font-size:14px" id="copymsg" role="status">The builder shows your price. Order at the counter, call us, or paste your bowl into the notes when you order on DoorDash. Delivery prices on DoorDash may differ from the shop.</p>
+<div class="byo-step"><h2>Or choose one of our options</h2><div class="menu-grid">${sigHtml}</div></div>
+</div></section>`;
+const byoUrl = BASE + "build-your-own-acai-bowl.html";
+page({
+  file: "build-your-own-acai-bowl.html",
+  title: "Build Your Own Açaí Bowl | Southgate, MI | Planet Juice",
+  desc: "Build your own açaí bowl at Planet Juice in Southgate, MI: choose an açaí, dragonfruit, ube, blue spirulina, mango or coconut base and up to 4 free toppings for $9.99.",
+  canonical: byoUrl,
+  extraHead: ld({ "@context": "https://schema.org", "@type": "MenuItem", "@id": byoUrl + "#bowl", name: "Build Your Own Açaí Bowl", description: "Choose a base (organic açaí, dragonfruit, ube, blue spirulina, mango or coconut) and up to 4 free toppings. Extra toppings $0.75 each.", image: BASE + "assets/bowl-planet-acai.webp", offers: { "@type": "Offer", price: BYO_PRICE.toFixed(2), priceCurrency: "USD" } }) + "\n" + ld(crumbs("Build Your Own Açaí Bowl", byoUrl)),
+  css: byoCss, main: byoMain, extraScript: byoJs,
+});
+
 /* ================= 404.html ================= */
 page({
   file: "404.html",

@@ -70,7 +70,7 @@ Already good: NAP (name, address, phone) is identical in the header, footer, vis
 3. **Reviews**: ask for Google reviews and add a "Leave a review" link (Google gives a short link in the Business Profile).
 4. **Citations**: same NAP on Yelp, Apple Business Connect, Bing Places, Facebook, DoorDash, the Southgate chamber of commerce.
 5. **Local landing content**: a short "Training and smoothies near Wyandotte / Taylor / Allen Park" section or pages, and mention Eureka Rd and Southgate in the home `h1`/first paragraph.
-6. **Trainer credibility**: "Ewah" is named in the meta description but has no bio/credential section with name and certification. Add one for E-E-A-T.
+6. **Trainer credibility**: "Moses" (owner and personal trainer) is named in the meta description but has no bio/credential section with name and certification. Add one for E-E-A-T.
 7. **Verify the domain** `planetjuice.shop` in Google Search Console, submit `sitemap.xml`, and confirm www vs. bare domain is redirected once.
 
 ## 5. Accessibility and quality (quick pass)
