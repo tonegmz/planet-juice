@@ -267,10 +267,24 @@ h3{font:800 18px/1.25 var(--display);font-stretch:105%;letter-spacing:-.01em;mar
 .add{min-height:36px;padding:0 14px;font-size:13px;border-radius:8px}
 .add .ico{width:14px;height:14px}
 .add.added{background:var(--surf-2)}
+.prod-sec{margin-top:36px}.prod-sec:first-child{margin-top:0}
+.prod-sec-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;margin:0 0 14px}
+.prod-sec-head h3{font:900 clamp(22px,2.6vw,28px)/1.1 var(--display);font-stretch:108%;letter-spacing:-.02em;margin:0}
+.prod-sec-head p{margin:0;color:var(--muted);font-size:13.5px;flex:1 1 280px}
+.prod-byo{grid-column:span 2;background:var(--purple);color:var(--white)}
+.byo-body{display:flex;flex-direction:column;flex:1;padding:16px 14px 14px}
+.byo-body .cat-badge{position:static;align-self:flex-start;margin-bottom:10px}
+.prod-byo h3{font-size:20px;color:var(--white)}
+.prod-byo p{margin:6px 0 14px;color:rgba(255,255,255,.92);font-size:13px;line-height:1.45}
+.byo-bases{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;margin:auto 0 0}
+.byo-bases span{background:var(--white);border-radius:10px;aspect-ratio:1;display:grid;place-items:center;padding:5px}
+.byo-bases img{width:100%;height:100%;object-fit:contain}
+.prod-byo .prod-foot b{color:var(--white)}
 .empty-cat{grid-column:1/-1;background:var(--white);border-radius:14px;padding:36px 24px;text-align:center}
 .empty-cat h3{font-size:20px}
 .empty-cat p{color:var(--muted);margin:8px auto 18px;max-width:46ch;font-size:14.5px}
-.extras{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:14px}
+.extras{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-top:14px}
+.extra[hidden]{display:none}
 .extra{background:var(--white);border-radius:14px;padding:18px}
 .extra-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
 .extra-top h3{font-size:15.5px}
@@ -702,11 +716,10 @@ h3{font:800 18px/1.25 var(--display);font-stretch:105%;letter-spacing:-.01em;mar
     <div class="chips" id="chips" role="group" aria-label="Menu categories"></div>
     <p class="menu-note" id="menu-note">Smoothies and Planet Picks are $7.99 (16oz) or $8.99 (24oz). Protein smoothies are $8.99 (16oz) or $9.99 (24oz). Swap in almond or oat milk for $0.50. Want it as a juice? Just ask at the counter.</p>
     <div class="prod-grid" id="products"></div>
-    <p class="menu-note" style="margin-top:20px"><a class="u" href="build-your-own-acai-bowl.html">Build your own açaí bowl →</a> &nbsp;·&nbsp; <a class="u" href="menu.html">See the full menu →</a></p>
+    <p class="menu-note" style="margin-top:20px"><a class="u" href="build-your-own-acai-bowl.html#build">Build your own açaí bowl →</a> &nbsp;·&nbsp; <a class="u" href="menu.html">See the full menu →</a></p>
     <div class="extras">
-      <div class="extra"><div class="extra-top"><h3>Nutrition Add-Ons</h3><b>$1.99 each</b></div><p>Boost any drink with Fat Burner, Caffeine, Recovery, Immune, Vitamin C, Collagen, Creatine, Pump or Omega-3. Protein options in store.</p></div>
-      <div class="extra"><div class="extra-top"><h3>Build Your Own Açaí Bowl</h3><b>$9.99</b></div><p>Pick a base (Organic Açaí, Dragonfruit, Ube, Blue Spirulina, Mango or Coconut) and up to four toppings. Extra toppings are $0.75 each.</p><div class="extra-pics"><figure><img src="assets/base-acai.webp" alt="" loading="lazy"><figcaption>Açaí</figcaption></figure><figure><img src="assets/base-pitaya.webp" alt="" loading="lazy"><figcaption>Dragonfruit</figcaption></figure><figure><img src="assets/base-ube.webp" alt="" loading="lazy"><figcaption>Ube</figcaption></figure><figure><img src="assets/base-spirulina.webp" alt="" loading="lazy"><figcaption>Blue Spirulina</figcaption></figure></div></div>
-      <div class="extra"><div class="extra-top"><h3>Pre-Workout</h3><b>$3.49</b></div><p>Three strength levels. Ask at the counter which one fits your training.</p><div class="extra-pics"><figure><img src="assets/pre-level1.webp" alt="" loading="lazy"><figcaption>Level 1 · Focus</figcaption></figure><figure><img src="assets/pre-level2.webp" alt="" loading="lazy"><figcaption>Level 2 · Intense</figcaption></figure><figure><img src="assets/pre-level3.webp" alt="" loading="lazy"><figcaption>Level 3 · Extreme</figcaption></figure></div></div>
+      <div class="extra" data-extra="addons"><div class="extra-top"><h3>Nutrition Add-Ons</h3><b>$1.99 each</b></div><p>Boost any drink with Fat Burner, Caffeine, Recovery, Immune, Vitamin C, Collagen, Creatine, Pump or Omega-3. Protein options in store.</p></div>
+      <div class="extra" id="extra-pre" data-cats="Smoothies,Protein,Refreshers,Shots,All"><div class="extra-top"><h3>Pre-Workout</h3><b>$3.49</b></div><p>Three strength levels. Ask at the counter which one fits your training.</p><div class="extra-pics"><figure><img src="assets/pre-level1.webp" alt="" loading="lazy"><figcaption>Level 1 · Focus</figcaption></figure><figure><img src="assets/pre-level2.webp" alt="" loading="lazy"><figcaption>Level 2 · Intense</figcaption></figure><figure><img src="assets/pre-level3.webp" alt="" loading="lazy"><figcaption>Level 3 · Extreme</figcaption></figure></div></div>
     </div>
   </div>
 </section>
@@ -885,13 +898,13 @@ h3{font:800 18px/1.25 var(--display);font-stretch:105%;letter-spacing:-.01em;mar
     ["shot-acv","ACV","Apple cider vinegar shot","Shots"],
     ["shot-amber","Wellness Shot","Wellness shot","Shots"]
   ];
-  EXTRA_ITEMS.forEach(function(s){PRODUCTS.push({id:s[0],name:s[1],desc:s[2],cat:s[3],img:IMG+s[0]+".webp",sizes:s[3]==="Planet Picks"?[["16oz",7.99],["24oz",8.99]]:s[3]==="Power Bowls"?[["Regular",9.99]]:null})});
+  EXTRA_ITEMS.forEach(function(s){PRODUCTS.push({id:s[0],name:s[1],desc:s[2],cat:s[3],img:IMG+s[0]+".webp",sizes:s[3]==="Planet Picks"?[["16oz",7.99],["24oz",8.99]]:(s[3]==="Power Bowls"||s[3]==="Açaí Bowls")?[["Regular",9.99]]:null})});
   var NOTES = {
     "Smoothies":"Every smoothie is 16oz for $7.99 or 24oz for $8.99. Swap in almond or oat milk for $0.50. Want it as a juice? Just ask at the counter.",
     "Protein":"Every protein smoothie is 16oz for $8.99 or 24oz for $9.99, with about 400 calories. Swap in almond, oat or coconut milk for $0.50. Choose your protein in store.",
     "Planet Picks":"Every Planet Pick is 16oz for $7.99 or 24oz for $8.99. Swap in almond or oat milk for $0.50.",
     "Power Bowls":"Every power bowl is $9.99.",
-    "Açaí Bowls":"Build your own açaí bowl for $9.99 with a base of your choice and up to 4 free toppings (extra toppings $0.75), or pick one of our signature bowls.",
+    "Açaí Bowls":"Every açaí bowl is $9.99, whether you build your own or pick a signature bowl. On a build-your-own bowl, up to 4 toppings are free and extra toppings are $0.75 each.",
     "All":"Smoothies and Planet Picks are $7.99 (16oz) or $8.99 (24oz). Protein smoothies are $8.99 (16oz) or $9.99 (24oz). Milk swaps are $0.50."
   };
   var CATS = ["All","Smoothies","Protein","Planet Picks","Kids","Açaí Bowls","Power Bowls","Refreshers","Café","Shots"];
@@ -964,20 +977,39 @@ h3{font:800 18px/1.25 var(--display);font-stretch:105%;letter-spacing:-.01em;mar
   function renderChips(){
     $("#chips").innerHTML = CATS.map(function(c){return '<button class="chip" type="button" aria-pressed="'+(c===current)+'" data-cat="'+esc(c)+'">'+esc(c)+'</button>'}).join("");
   }
+  var BYO_BASES = ["acai","pitaya","ube","spirulina","mango","coconut"];
+  function byoCard(){
+    return '<article class="prod prod-info prod-byo"><div class="byo-body"><span class="cat-badge">Açaí Bowls</span><h3>Build Your Own Açaí Bowl</h3><p>Pick a base and up to 4 free toppings. Extra toppings are $0.75 each.</p><div class="byo-bases">'+
+      BYO_BASES.map(function(b){return '<span><img src="'+IMG+'base-'+b+'.webp" alt="" loading="lazy"></span>'}).join("")+
+      '</div><div class="prod-foot"><b class="price">$9.99</b><a class="btn btn-white" href="build-your-own-acai-bowl.html#build">Build yours →</a></div></div></article>';
+  }
+  function card(p){
+    var top = '<article class="prod'+(p.sizes?'':' prod-info')+'" data-id="'+p.id+'"><div class="prod-img"><span class="cat-badge">'+esc(p.cat)+'</span><img src="'+p.img+'" alt="'+esc(p.name)+'" loading="lazy"></div><div class="prod-body"><h3>'+esc(p.name)+'</h3><p>'+esc(p.desc)+'</p>'+(p.stats?'<span class="nutri">'+esc(p.stats)+'</span>':'');
+    if(!p.sizes) return top+'<div class="prod-foot"><span class="instore">Price in store</span><a class="btn btn-line add js-doordash" href="'+DOORDASH_URL+'" target="_blank" rel="noopener">Order</a></div></div></article>';
+    return top+'<div class="sizes" role="group" aria-label="Size">'+
+      p.sizes.map(function(s,i){return '<button class="size" type="button" aria-pressed="'+(i===0)+'" data-i="'+i+'">'+s[0]+'<span class="size-p"> · '+money(s[1])+'</span></button>'}).join("")+
+      '</div><div class="prod-foot"><b class="price">'+money(p.sizes[0][1])+'</b><button class="btn btn-purple add" type="button"><svg class="ico"><use href="#i-plus"/></svg>Add</button></div></div></article>';
+  }
+  function cards(cat){
+    return (cat==="Açaí Bowls"?byoCard():"")+PRODUCTS.filter(function(p){return p.cat===cat}).map(card).join("");
+  }
   function renderProducts(){
+    var box = $("#products");
     $("#menu-note").textContent = NOTES[current] || "Prices for this part of the menu are in store and on DoorDash.";
-    var list = PRODUCTS.filter(function(p){return current==="All"||p.cat===current});
-    if(!list.length){
-      $("#products").innerHTML = '<div class="empty-cat"><h3>'+esc(current)+': in store and on DoorDash</h3><p>This part of the menu isn\'t online yet. Order it at the counter on Eureka Road or through DoorDash.</p><a class="btn btn-purple js-doordash" href="'+DOORDASH_URL+'" target="_blank" rel="noopener">Order on DoorDash</a></div>';
-      return;
+    if(current==="All"){
+      box.className = "prod-secs";
+      box.innerHTML = CATS.filter(function(c){return c!=="All"}).map(function(c){
+        var body = cards(c); if(!body) return "";
+        return '<section class="prod-sec" aria-labelledby="sec-'+c.replace(/\W/g,"")+'"><div class="prod-sec-head"><h3 id="sec-'+c.replace(/\W/g,"")+'">'+esc(c)+'</h3><p>'+esc(NOTES[c]||"")+'</p></div><div class="prod-grid">'+body+'</div></section>';
+      }).join("");
+    } else if(!PRODUCTS.some(function(p){return p.cat===current})){
+      box.className = "prod-grid";
+      box.innerHTML = '<div class="empty-cat"><h3>'+esc(current)+': in store and on DoorDash</h3><p>This part of the menu isn\'t online yet. Order it at the counter on Eureka Road or through DoorDash.</p><a class="btn btn-purple js-doordash" href="'+DOORDASH_URL+'" target="_blank" rel="noopener">Order on DoorDash</a></div>';
+    } else {
+      box.className = "prod-grid";
+      box.innerHTML = cards(current);
     }
-    $("#products").innerHTML = list.map(function(p){
-      var top = '<article class="prod'+(p.sizes?'':' prod-info')+'" data-id="'+p.id+'"><div class="prod-img"><span class="cat-badge">'+esc(p.cat)+'</span><img src="'+p.img+'" alt="'+esc(p.name)+'" loading="lazy"></div><div class="prod-body"><h3>'+esc(p.name)+'</h3><p>'+esc(p.desc)+'</p>'+(p.stats?'<span class="nutri">'+esc(p.stats)+'</span>':'');
-      if(!p.sizes) return top+'<div class="prod-foot"><span class="instore">Price in store</span><a class="btn btn-line add js-doordash" href="'+DOORDASH_URL+'" target="_blank" rel="noopener">Order</a></div></div></article>';
-      return top+'<div class="sizes" role="group" aria-label="Size">'+
-        p.sizes.map(function(s,i){return '<button class="size" type="button" aria-pressed="'+(i===0)+'" data-i="'+i+'">'+s[0]+'<span class="size-p"> · '+money(s[1])+'</span></button>'}).join("")+
-        '</div><div class="prod-foot"><b class="price">'+money(p.sizes[0][1])+'</b><button class="btn btn-purple add" type="button"><svg class="ico"><use href="#i-plus"/></svg>Add</button></div></div></article>';
-    }).join("");
+    $$(".extra[data-cats]").forEach(function(x){ x.hidden = x.dataset.cats.split(",").indexOf(current)<0 });
   }
   $("#chips").addEventListener("click",function(e){var b=e.target.closest(".chip"); if(!b) return; current=b.dataset.cat; renderChips(); renderProducts();});
   $("#products").addEventListener("click",function(e){

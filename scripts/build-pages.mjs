@@ -86,7 +86,7 @@ for (const c of cats) {
   const items = PRODUCTS.filter((p) => p.cat === c);
   if (!items.length) continue;
   const id = c.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-  menuSections += `<section class="menu-cat" id="${id}"><h2 class="h-display">${esc(c)}</h2><p class="lead">${esc(NOTES[c] || "Prices for this part of the menu are in store and on DoorDash.")}</p><div class="menu-grid">`;
+  menuSections += `<section class="menu-cat" id="${id}"><h2 class="h-display">${esc(c)}</h2><p class="lead">${esc(NOTES[c] || "Prices for this part of the menu are in store and on DoorDash.")}</p>${c === "Açaí Bowls" ? '<a class="menu-byo" href="build-your-own-acai-bowl.html#build"><b>Build Your Own Açaí Bowl · $9.99</b><span>Choose a base and up to 4 free toppings. Build yours →</span></a>' : ""}<div class="menu-grid">`;
   for (const p of items) {
     const { w, h } = dims(p.img);
     menuSections += `<article class="menu-item"><img src="${p.img}" alt="${esc(p.name)}" width="${w}" height="${h}" loading="lazy"><div><h3>${esc(p.name)}</h3><p>${esc(p.desc)}</p>${p.stats ? `<p class="stats">${esc(p.stats)}</p>` : ""}<p class="price">${esc(priceText(p))}</p></div></article>`;
@@ -100,7 +100,13 @@ for (const c of cats) {
     })),
   });
 }
-const chips = cats.map((c) => `<a href="#${c.toLowerCase().replace(/[^a-z0-9]+/g, "-")}">${esc(c)}</a>`).join("");
+menuSections += `<section class="menu-cat" id="add-ons"><h2 class="h-display">Add-ons</h2><p class="lead">Boost any drink. Pre-Workout goes in smoothies, protein smoothies, refreshers and shots.</p><div class="menu-grid">
+<article class="menu-item"><div><h3>Nutrition Add-Ons · $1.99 each</h3><p>Fat Burner, Caffeine, Recovery, Immune, Vitamin C, Collagen, Creatine, Pump or Omega-3. Protein options in store.</p></div></article>
+<article class="menu-item"><div><h3>Pre-Workout · $3.49</h3><p>Level 1 · Focus, Level 2 · Intense, Level 3 · Extreme. Ask at the counter which one fits your training.</p></div></article></div></section>`;
+menuLd.push({ "@type": "MenuSection", name: "Add-ons", hasMenuItem: [
+  { "@type": "MenuItem", name: "Nutrition Add-Ons", offers: { "@type": "Offer", price: "1.99", priceCurrency: "USD" } },
+  { "@type": "MenuItem", name: "Pre-Workout", description: "Level 1 Focus, Level 2 Intense, Level 3 Extreme", offers: { "@type": "Offer", price: "3.49", priceCurrency: "USD" } }] });
+const chips = cats.concat(["Add-ons"]).map((c) => `<a href="#${c.toLowerCase().replace(/[^a-z0-9]+/g, "-")}">${esc(c)}</a>`).join("");
 const menuCss = `
 .menu-hero{padding-block:clamp(48px,7vw,88px)}
 .menu-chips{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 0}
@@ -114,7 +120,9 @@ const menuCss = `
 .menu-item h3{margin:0 0 4px;font:700 17px/1.2 var(--body)}
 .menu-item p{margin:0 0 6px;color:var(--muted);font-size:14px}
 .menu-item .price{color:var(--ink);font-weight:700}
-.menu-item .stats{color:var(--purple);font-weight:600;font-size:13px}`;
+.menu-item .stats{color:var(--purple);font-weight:600;font-size:13px}
+.menu-byo{display:flex;flex-direction:column;gap:4px;margin-top:20px;padding:18px 20px;border-radius:16px;background:var(--purple);color:#fff;text-decoration:none}
+.menu-byo b{font:800 20px/1.2 var(--display)}.menu-byo span{opacity:.92;font-size:14px}`;
 const menuMain = `<section class="section menu-hero mist"><div class="wrap">
 <p class="eyebrow">Smoothie bar · Southgate, MI</p>
 <h1 class="h-display">Our full menu</h1>
@@ -188,7 +196,7 @@ const BYO_PRICE = 9.99, BYO_FREE = 4, BYO_EXTRA = 0.75;
 const bases = [
   ["Organic Açaí", "assets/base-acai.webp"], ["Dragonfruit", "assets/base-pitaya.webp"],
   ["Ube", "assets/base-ube.webp"], ["Blue Spirulina", "assets/base-spirulina.webp"],
-  ["Mango", null, "#F6A623"], ["Coconut", null, "#EFE8DA"],
+  ["Mango", "assets/base-mango.webp"], ["Coconut", "assets/base-coconut.webp"],
 ];
 const toppings = {
   Fruits: ["Blueberries", "Bananas", "Strawberries", "Kiwi"],
@@ -206,30 +214,42 @@ const baseHtml = bases.map(([n, img, color], i) => {
   return `<label class="opt base"><input type="radio" name="base" value="${esc(n)}"${i === 0 ? " checked" : ""}>${pic}<span>${esc(n)}</span></label>`;
 }).join("");
 const topHtml = Object.entries(toppings).map(([g, list]) => `<fieldset class="tgroup"><legend>${g}</legend>${list.map((t) => `<label class="opt top"><input type="checkbox" name="topping" value="${esc(t)}"><span>${esc(t)}</span></label>`).join("")}</fieldset>`).join("");
-const sigHtml = signature.map(([n, d, img]) => `<article class="menu-item">${img ? `<img src="${img}" alt="${esc(n)} açaí bowl" width="${dims(img).w}" height="${dims(img).h}" loading="lazy">` : `<span class="swatch ph" aria-hidden="true"></span>`}<div><h3>${esc(n)}</h3><p>${esc(d)}</p></div></article>`).join("");
+const sigHtml = signature.map(([n, d, img]) => `<article class="menu-item">${img ? `<img src="${img}" alt="${esc(n)} açaí bowl" width="${dims(img).w}" height="${dims(img).h}" loading="lazy">` : `<span class="swatch ph" aria-hidden="true"></span>`}<div><h3>${esc(n)}</h3><p>${esc(d)}</p><p class="price">$9.99</p></div></article>`).join("");
 const byoCss = `
-.byo-hero{padding-block:clamp(48px,7vw,88px)}
+.byo-focus{background:var(--purple);color:#fff;padding-block:clamp(44px,6vw,80px);scroll-margin-top:84px}
+.byo-focus .eyebrow{color:var(--lav-soft)}
+.byo-focus h1{color:#fff}
+.byo-focus .lead{color:rgba(255,255,255,.92)}
 .byo-step{margin-top:36px}
-.byo-step h2{display:flex;align-items:center;gap:12px;font:800 clamp(22px,3vw,30px)/1.1 var(--display);margin:0 0 6px}
-.byo-step h2 b{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--purple);color:#fff;font-size:18px}
-.byo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px;margin-top:16px}
+.byo-step h2{display:flex;align-items:center;gap:12px;font:800 clamp(22px,3vw,30px)/1.1 var(--display);margin:0 0 6px;color:#fff}
+.byo-step h2 b{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;background:#fff;color:var(--purple);font-size:18px}
+.byo-step .lead{margin-top:0}
+.byo-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:14px;margin-top:16px}
 .opt{position:relative;cursor:pointer}
-.opt input{position:absolute;opacity:0;inset:0;cursor:pointer}
-.opt.base{display:flex;flex-direction:column;align-items:center;gap:8px;padding:12px;border:1.5px solid var(--line);border-radius:14px;background:var(--white);font:600 14px/1.2 var(--body);text-align:center}
-.opt.base img,.swatch{width:72px;height:72px;border-radius:50%;object-fit:cover;display:block}
-.swatch{border:1px solid var(--line)}.swatch.ph{width:92px;height:92px;border-radius:10px;background:var(--lav-soft);flex:none}
-.opt.base:has(input:checked),.opt.top:has(input:checked){border-color:var(--purple);background:var(--lav-soft);box-shadow:0 0 0 2px var(--purple) inset}
-.opt:has(input:focus-visible){outline:2px solid var(--lav);outline-offset:3px}
-.tgroups{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:16px}
-.tgroup{border:1px solid var(--line);border-radius:14px;padding:14px;margin:0;display:grid;gap:8px;align-content:start}
-.tgroup legend{font:800 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--purple);padding:0 6px}
-.opt.top{display:block;padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;font:600 14px/1.2 var(--body);background:var(--white)}
-.byo-sum{position:sticky;bottom:12px;margin-top:28px;padding:18px;border-radius:16px;background:var(--ink);color:#fff;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;z-index:5}
-.byo-sum p{margin:0}.byo-sum .tot{font:800 26px/1 var(--display)}.byo-sum small{opacity:.75;display:block;margin-top:4px}
+.opt input{position:absolute;opacity:0;inset:0;cursor:pointer;margin:0}
+.opt.base{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:16px 10px 14px;aspect-ratio:1/1;border-radius:18px;background:#fff;color:var(--ink);font:700 14px/1.2 var(--body);text-align:center;box-shadow:0 6px 18px -10px rgba(20,10,40,.45)}
+.opt.base img{width:84px;height:84px;object-fit:contain;display:block}
+.opt.base:has(input:checked){background:var(--lav-soft);box-shadow:0 0 0 3px var(--ink)}
+.opt.base:has(input:checked)::after{content:"\\2713";position:absolute;top:8px;right:8px;width:24px;height:24px;border-radius:50%;background:var(--purple);color:#fff;display:grid;place-items:center;font-size:14px;font-weight:800}
+.opt:has(input:focus-visible){outline:3px solid #fff;outline-offset:3px}
+.tgroups{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:16px}
+.tgroup{border:0;border-radius:18px;padding:16px;margin:0;display:grid;gap:8px;align-content:start;background:#fff;color:var(--ink)}
+.tgroup legend{float:left;width:100%;padding:0;margin:0 0 4px;font:800 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--purple)}
+.tgroup legend+*{clear:both}
+.opt.top{display:block;padding:11px 12px;border:1.5px solid var(--line);border-radius:10px;font:600 14px/1.2 var(--body);background:#fff}
+.opt.top:has(input:checked){border-color:var(--purple);background:var(--lav-soft);box-shadow:0 0 0 2px var(--purple) inset}
+.byo-sum{position:sticky;bottom:12px;margin-top:28px;padding:18px;border-radius:18px;background:var(--ink);color:#fff;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;z-index:5}
+.byo-sum p{margin:0}.byo-sum .tot{font:800 26px/1 var(--display)}.byo-sum small{opacity:.8;display:block;margin-top:4px}
 .byo-sum .btns{display:flex;flex-wrap:wrap;gap:10px}
+@media(max-width:560px){.byo-sum{padding:12px;gap:8px;bottom:8px}.byo-sum .tot{font-size:22px}.byo-sum .btns{flex-wrap:nowrap;gap:8px;width:100%}.byo-sum .btn{flex:1;min-height:40px;padding:0 10px;font-size:13.5px}.opt.base{aspect-ratio:auto;min-height:130px}}
+.byo-fine{margin:16px 0 0;font-size:14px;color:rgba(255,255,255,.88)}
+.byo-more{padding-block:clamp(40px,6vw,72px)}
+.byo-more h2{font:800 clamp(22px,3vw,30px)/1.1 var(--display);margin:0}
 .menu-item{display:flex;gap:14px;align-items:flex-start;padding:14px;border:1px solid var(--line);border-radius:14px;background:var(--white)}
 .menu-item img{width:92px;height:92px;object-fit:cover;border-radius:10px;flex:none;background:var(--mist)}
-.menu-item h3{margin:0 0 4px;font:700 17px/1.2 var(--body)}.menu-item p{margin:0;color:var(--muted);font-size:14px}
+.menu-item h3{margin:0 0 4px;font:700 17px/1.2 var(--body)}.menu-item p{margin:0 0 4px;color:var(--muted);font-size:14px}
+.menu-item .price{color:var(--ink);font-weight:700}
+.swatch.ph{display:block;width:92px;height:92px;border-radius:10px;background:var(--lav-soft);flex:none}
 .menu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-top:16px}`;
 const byoJs = `<script>
 (function(){
@@ -250,22 +270,19 @@ const byoJs = `<script>
   });
 })();
 </script>`;
-const byoMain = `<section class="section byo-hero mist"><div class="wrap">
+const byoMain = `<section class="byo-focus" id="build"><div class="wrap">
 <p class="eyebrow">Açaí bar · Southgate, MI</p>
 <h1 class="h-display">Build your own açaí bowl</h1>
-<p class="lead">Pick a base, pile on up to ${BYO_FREE} toppings free, and it's $${BYO_PRICE} at the counter on Eureka Road. Extra toppings are $${BYO_EXTRA.toFixed(2)} each.</p>
-<div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:22px">
-<a class="btn btn-purple btn-lg" href="${DD}" target="_blank" rel="noopener">Order on DoorDash</a>
-<a class="btn btn-line btn-lg" href="tel:+17344442819">Call (734) 444-2819</a>
-<a class="btn btn-line btn-lg" href="menu.html">See the full menu</a></div>
-</div></section>
-<section class="section"><div class="wrap">
-<div class="byo-step"><h2><b>1</b>Choose a base</h2><p class="lead" style="margin-top:0">Pick one.</p><div class="byo-grid" role="radiogroup" aria-label="Base">${baseHtml}</div></div>
-<div class="byo-step"><h2><b>2</b>Choose your toppings</h2><p class="lead" style="margin-top:0">Up to ${BYO_FREE} free toppings. Extra toppings $${BYO_EXTRA.toFixed(2)} each.</p><div class="tgroups">${topHtml}</div></div>
+<p class="lead">Pick a base, add up to ${BYO_FREE} toppings free, and it's $${BYO_PRICE} at the counter on Eureka Road. Extra toppings are $${BYO_EXTRA.toFixed(2)} each.</p>
+<div class="byo-step"><h2><b>1</b>Choose a base</h2><p class="lead">Pick one.</p><div class="byo-grid" role="radiogroup" aria-label="Base">${baseHtml}</div></div>
+<div class="byo-step"><h2><b>2</b>Choose your toppings</h2><p class="lead">Up to ${BYO_FREE} free toppings. Extra toppings $${BYO_EXTRA.toFixed(2)} each.</p><div class="tgroups">${topHtml}</div></div>
 <div class="byo-sum" id="sum"><div><p class="tot" id="tot">$${BYO_PRICE.toFixed(2)}</p><small id="note"></small></div>
-<div class="btns"><button class="btn btn-white" type="button" id="copy">Copy my bowl</button><a class="btn btn-purple" href="${DD}" target="_blank" rel="noopener">Order on DoorDash</a></div></div>
-<p class="lead" style="font-size:14px" id="copymsg" role="status">The builder shows your price. Order at the counter, call us, or paste your bowl into the notes when you order on DoorDash. Delivery prices on DoorDash may differ from the shop.</p>
-<div class="byo-step"><h2>Or choose one of our options</h2><div class="menu-grid">${sigHtml}</div></div>
+<div class="btns"><button class="btn btn-white" type="button" id="copy">Copy my bowl</button><a class="btn btn-purple" style="background:#fff;color:var(--purple)" href="${DD}" target="_blank" rel="noopener">Order on DoorDash</a></div></div>
+<p class="byo-fine" id="copymsg" role="status">The builder shows your price. Order at the counter, call us, or paste your bowl into the notes when you order on DoorDash. Delivery prices on DoorDash may differ from the shop.</p>
+</div></section>
+<section class="byo-more"><div class="wrap">
+<h2>Or choose one of our options</h2><p class="lead" style="margin-top:6px">Every signature açaí bowl is $9.99.</p><div class="menu-grid">${sigHtml}</div>
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px"><a class="btn btn-purple btn-lg" href="${DD}" target="_blank" rel="noopener">Order on DoorDash</a><a class="btn btn-line btn-lg" href="tel:+17344442819">Call (734) 444-2819</a><a class="btn btn-line btn-lg" href="menu.html">See the full menu</a></div>
 </div></section>`;
 const byoUrl = BASE + "build-your-own-acai-bowl.html";
 page({
