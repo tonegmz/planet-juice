@@ -59,7 +59,7 @@ ${extraHead}
 ${fonts}
 ${style.replace("</style>", css + "\n</style>")}
 </head>
-<body>
+<body id="top">
 ${sprite}
 ${top}
 <main>
